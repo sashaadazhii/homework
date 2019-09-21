@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping list</title>
+    <style>
+        form {
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        legend {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="Shopping_list">
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Список покупок</legend>
+                    <ol>
+                        <li>
+                            <input type="checkbox" name="list_item" id="wallpaper" value="wallpaper">
+                            <label for="wallpaper">Шпалери</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="list_item" id="glue" value="glue">
+                            <label for="glue">Клей</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="list_item" id="paint" value="paint">
+                            <label for="paint">Фарба</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="list_item" id="brush" value="brush">
+                            <label for="brush">Пензлі</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="list_item" id="laminate" value="laminate">
+                            <label for="laminate">Ламінат</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="list_item" id="sockets" value="sockets">
+                            <label for="sockets">Розетки</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="list_item" id="switches" value="switches">
+                            <label for="switches">Вмикачі</label>
+                        </li>
+                    </ol>
+
+                    <input type="submit" value="Зберегти список">
+                    <!--не працює без привязки до action чи js ??? -->
+                    <button type="reset">Очистити</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
