@@ -1,0 +1,42 @@
+body {
+    width:759px;
+    margin: 0 auto;
+    
+}
+h1 {
+    background-color: #A52A2A;
+    color: #fff;
+    text-align: center;
+}
+p {
+    font-size: 18px;
+}
+#header_logo {
+    text-align: center;
+}
+.curve_span {
+    font-style: italic;
+}
+.bold_span {
+    font-weight: bold;
+}
+.blue_span {
+    color: blue;
+}
+.all_cars {
+    text-align: center;
+}
+.all_cars img {
+ padding-bottom: 3px;
+ border: 3px black dashed ;
+}
+.copyright {
+    background-color: black;
+}
+.copyright p {
+    padding: 3px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+
+}
