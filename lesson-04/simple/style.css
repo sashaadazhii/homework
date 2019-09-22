@@ -1,7 +1,6 @@
 body {
     width:759px;
     margin: 0 auto;
-    
 }
 h1 {
     background-color: #A52A2A;
@@ -30,6 +29,9 @@ p {
  padding-bottom: 3px;
  border: 3px black dashed ;
 }
+footer {
+    margin-top: 40px;
+}
 .copyright {
     background-color: black;
 }
@@ -38,5 +40,4 @@ p {
     font-size: 20px;
     color: #fff;
     text-align: center;
-
 }
