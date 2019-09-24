@@ -1,5 +1,5 @@
 body {
-    width:759px;
+    max-width:759px;
     margin: 0 auto;
 }
 h1 {
@@ -10,7 +10,7 @@ h1 {
 p {
     font-size: 18px;
 }
-#header_logo {
+#article_logo {
     text-align: center;
 }
 .curve_span {
