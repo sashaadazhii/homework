@@ -55,12 +55,10 @@ header p {
 }
 main {
     margin-top: 2px;
+    overflow: hidden;
 }
 main * {
     font-size: 18px;
-}
-.row_wrapper {
-    min-height: 290px;
 }
 .main_left {
     float: left;
