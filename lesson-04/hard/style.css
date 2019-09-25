@@ -10,7 +10,6 @@ header {
 a {
     text-decoration: none;
 }
-
 .line {
    
     margin: 0 auto;
@@ -38,7 +37,7 @@ header p {
     padding: 0;
 }
 #nav_menu ul>li {
-     padding-top: 20px;
+    padding-top: 20px;
     margin: 0 42px;
     float: left;
 }
