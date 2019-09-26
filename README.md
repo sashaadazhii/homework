@@ -8,3 +8,5 @@
 
 [Lesson-04-hard](https://sashaadazhii.github.io/homework/lesson-04/hard/index.html)
 
+[Lesson-05](https://sashaadazhii.github.io/homework/lesson-05/index.html)
+
