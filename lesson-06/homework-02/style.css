@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+* {
+    box-sizing: border-box;
+    font-family: \'Trebuchet MS\', Trebuchet, Arial, sans-serif;
+   /* transition: all .1s ease-in;*/
+}
+
+ul {
+    width: 500px;
+    margin: 20px auto;
+    padding-left: 0;
+}
+ul li {
+    list-style-type: none;
+    font-size: 14px;
+    padding: 7px 5px;
+    color: #fff;
+}
+
+.container_light {
+    padding: 12px 0;
+    background-color: #535353;
+    text-align: center;
+}
+
+h2,
+p {
+    color:#ba777d;
+    margin: 0;
+}
+
+li:nth-child(odd) {
+    background-color: #878191;
+}
+
+li:nth-child(even) {
+    background-color: #797086;
+}
+
+label {
+    width:100%;
+}
+
+.add_info {
+font-size: 11px;
+}
+
+.add_info:before {
+    content: "( ";
+}
+
+.add_info:after {
+    content: ") ";
+}
+
+    /* hover --  active -- checked*/
+li:hover {
+    background-color: #514b59;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+li:active {
+    background-color: #dbb0ad;
+}
+
+input[type=checkbox]:checked+label {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+              /*footer*/
+.bon_apetit {
+    width: 500px;
+    margin: 0 auto;
+}
