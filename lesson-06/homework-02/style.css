@@ -41,10 +41,6 @@ li:nth-child(even) {
     background-color: #797086;
 }
 
-label {
-    width:100%;
-}
-
 .add_info {
 font-size: 11px;
 }

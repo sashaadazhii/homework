@@ -17,6 +17,7 @@
     ont-weight: normal;
     font-style: normal;
     }
+
     body {
         margin: 0;
         padding: 0;
@@ -71,3 +72,23 @@
     .container_icon {
         display: inline-block;
     }
+
+    /*-----with Font Awesome icons*/
+ 
+.fas {
+    font-size: 25px;
+    color: #fff;
+}
+
+.active_fa {
+    color:#2a69a6;
+    background-color: transparent;
+}
+
+/*hover*/
+.container_icon:hover .icon_row {
+    background-color: #fff;
+}
+.container_icon:hover .fas {
+    color: #2a69a6;
+}
