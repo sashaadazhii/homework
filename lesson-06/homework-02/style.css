@@ -64,7 +64,7 @@ li:active {
     background-color: #dbb0ad;
 }
 
-input[type=checkbox]:checked+label {
+input[type=checkbox]:checked{
     text-decoration: line-through;
     color: rgba(255, 255, 255, 0.5);
 }
