@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:#fff;
+    font-family: “Lucida Sans Unicode”, “Lucida Grande”, sans-serif;
+}
+
+body {
+   
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #2994cc;
+}
+
+body>* {
+    width: 600px;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+}
+
+.cities {
+    /*width: 600px;*/
+    padding-left: 0;
+    font-size: 0;
+    transition: all .1s ease-in;
+}
+.cities li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 20px 0;
+    font-size: 14px;
+    border: 1px solid #fff;
+    text-align: center;
+}
+
+.item1 {
+    width:25%;
+}
+.item2 {
+    width:50%;
+}
+.item4 {
+    width:100%;
+}
+.temperature,
+.wi {
+    padding-top: 5px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.blue {
+    background-color: #2693cb;
+}
+.aqua {
+    background-color: #24bdcb;
+}
+.burgundi {
+    background-color: #966f95;
+}
+.teracot {
+    background-color: #c75446;
+}
+.orange {
+    background-color: #e87247;
+}
+.yellow {
+    background-color: #ffca5e;
+}
+.lime {
+    background-color: #95c398;
+}
+.dark-green {
+    background-color: #5f9595;
+}
+.pink {
+    background-color: #cd7298;
+}
+.grass {
+    background-color: #288d62;
+}
+.violet {
+    background-color: #686998;
+}
+
+/*hover*/
+.cities:hover {
+    cursor: pointer;
+}
+
+.cities:hover li:not(:hover) {
+    opacity: 0.6; 
+}

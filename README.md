@@ -24,3 +24,15 @@ Footer
 
 Shopping list (from video)
 [Lesson-06-02](https://sashaadazhii.github.io/homework/lesson-06/homework-02/index.html)
+
+Namaste
+[Lesson-07-01](https://sashaadazhii.github.io/homework/lesson-07/homework-01/index.html)
+
+Weather
+[Lesson-07-02](https://sashaadazhii.github.io/homework/lesson-07/homework-02/index.html)
+
+Comments
+[Lesson-07-03](https://sashaadazhii.github.io/homework/lesson-07/homework-03/index.html)
+
+
+
