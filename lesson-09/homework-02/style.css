@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Futura PT Heavy';
+    src: url('./assets/fonts/FuturaPT-Heavy.eot');
+    src: url('./assets/fonts/FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/FuturaPT-Heavy.woff') format('woff'),
+    url('./assets/fonts/FuturaPT-Heavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Proxima Nova Regulary';
+    src: url('./assets/fonts/Proxima\ Nova\ Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+    }    
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+body {
+    background-color: #464f54;
+}
+/*common classes*/
+
+.lower {
+    text-transform: uppercase;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 1060px;
+    margin: 150px auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 66px 0px #000;
+}
+.container-hidden {
+    padding-left: 63px;
+    border-right: 2px solid #e8eced;
+}
+
+.container {
+    position: relative;
+    padding: 125px 125px 0 62px;
+}
+
+.search-panel-container {
+    position: absolute;
+    top: -115px;
+    right: -70px;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 875px;
+    color: #fff;
+}
+
+.search-panel-hidden {
+    height: 50px;
+    border-top: 2px solid #303030;
+    background-color: #181818;
+   
+}
+
+.search-panel {
+    position: relative;
+    padding: 50px 0 0 60px;
+    background-color: #181818;
+}
+
+.edit-panel {
+    position: relative;
+    left: 65px;
+    width: 810px;
+    background-color: #f1b82b;
+    padding-left: 40px;
+    font-size: 0;
+}
+
+.icon-container {
+    width: 615px;
+}
+
+.material-icons {
+    width: 10%;
+    opacity: 0.5;
+    padding: 20px 0;
+    font-size: 26px;/*не працює*/
+}
+
+.active-icon {
+    opacity: 1;
+}
+
+.edit-title {
+    font-family: 'Proxima Nova Regulary';
+    font-size: 13px;
+    color: #777;
+    letter-spacing: 7px;
+}
+
+.input-line {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    padding-bottom:20px; 
+}
+
+.read-panel {
+    padding-top: 40px;
+}
+
+.author {
+    font-family: 'Proxima Nova Regulary';
+    font-size: 19px;
+    color: #b5b5b5;
+    letter-spacing: 4px;
+}
+
+.title-article {
+    font-family: 'Futura PT Heavy';
+    font-size: 78px;
+    padding-top: 50px;
+    color: #2a2a2a;
+    letter-spacing: 4px;
+}
+
+.pretitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #8f8f8f;
+    padding: 20px 0 40px 0;
+}
+
+.innertext {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 27px;
+    padding: 20px 0;
+    line-height: 40px;
+    text-align: justify;
+}

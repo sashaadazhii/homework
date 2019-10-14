@@ -34,5 +34,18 @@ Weather
 Comments
 [Lesson-07-03](https://sashaadazhii.github.io/homework/lesson-07/homework-03/index.html)
 
+Cups Flex
+[Lesson-08-01](https://sashaadazhii.github.io/homework/lesson-08/homework-01/index.html)
+
+Photo blog Flex
+[Lesson-08-02](https://sashaadazhii.github.io/homework/lesson-08/homework-02/index.html)
+
+Font face
+[Lesson-09-01](https://sashaadazhii.github.io/homework/lesson-09/homework-01/index.html)
+
+Editor Font face
+[Lesson-09-02](https://sashaadazhii.github.io/homework/lesson-09/homework-02/index.html)
+
+
 
 
