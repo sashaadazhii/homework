@@ -82,6 +82,9 @@
         height: 100%;
         padding: 25px;
     }
+    .item-date {
+        min-height: 17px;
+    }
 
     .date{
         font-size: 13px;
@@ -108,7 +111,6 @@
         margin:  0 auto;
         align-items:center;
         padding-top: 90px;
-
     }
 
     .loading {
