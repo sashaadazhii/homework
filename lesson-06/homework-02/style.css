@@ -50,7 +50,13 @@ font-size: 11px;
 }
 
 .add_info:after {
-    content: ") ";
+    content: " )";
+}
+
+label:after {
+    content: "";
+    display: block;
+    width: 100%;
 }
 
     /* hover --  active -- checked*/
