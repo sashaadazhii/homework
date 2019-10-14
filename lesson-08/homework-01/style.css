@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Miso Bold';
+    src: url('./assets/fonts/MISO-BOL.OTF');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Miso Light';
+        src: url('./assets/fonts/MISO-LIG.OTF');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    max-width: 1200px;
+    height: 600px;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 15px;
+    margin: 20px auto;
+    background-color: #fdde7e;
+}
+
+.flex-item {
+    display: flex;
+    width: 360px;
+   /* height: 500px;*/
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*align-self: stretch;*/
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 1px #d3b969;
+    padding: 35px;
+}
+
+.price {
+    font-family: 'Miso Bold';
+    font-size: 70px;
+    color: #02995b;
+}
+
+.item-title {
+    font-family: 'Miso Light';
+    font-size: 60px;
+    color: #333;
+}
+
+.item-description {
+    width: 50%;
+    font-family: 'Miso Light';
+    font-size: 30px;
+    color:#696969;
+    text-align: center;
+}
+
+.center-item {
+    flex-basis: 185px;
+
+}

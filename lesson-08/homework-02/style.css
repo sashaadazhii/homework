@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'HansKendrick Regular';
+    src: url('./assets/fonts/HansKendrick-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'HansKendrick Regular';
+    }
+
+    body {
+        background-color: #e2e7ec;
+        margin: 70px auto
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    h4 {
+        text-transform: uppercase; 
+        padding-top: 20px;
+        font-size: 22px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    body>* {
+        max-width: 1120px;
+       
+    }
+
+    .wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin: 0 auto;
+
+    }
+
+    .item-wrapper {
+        display: flex;
+        flex-flow: column;
+        width: 360px;
+        height: 540px;
+        margin-top: 20px;
+        background: #fff; 
+    }
+
+    .main-item {
+        position: relative;
+        flex-basis: 740px;
+    }
+
+     .main-item .item-prev {
+        position: absolute;
+        bottom: 0;
+        height: auto;
+        width: 75%;
+     }
+
+     .item-title {
+        padding-bottom: 15px;
+     }
+
+     .main-item .item-title a {
+         font-size: 30px;
+         color: #fff;
+         width:60%;
+     }
+
+    .item-prev {
+        position: relative;
+        height: 100%;
+        padding: 25px;
+    }
+
+    .date{
+        font-size: 13px;
+        color: #818181;
+        text-transform: uppercase; 
+    }
+
+    .main-item .date {
+        color: rgba(255,255,255,0.5);
+    }
+
+    .item-author {
+        position: absolute;
+        bottom: 25px;
+    }
+
+    .item-author img {
+        border-radius: 50%;
+    }
+
+    .paginnation {
+        display: flex;
+        justify-content: center;
+        margin:  0 auto;
+        align-items:center;
+        padding-top: 90px;
+
+    }
+
+    .loading {
+        margin: 13px;
+    }
+
+    .paginnation h4 {
+        padding: 0;
+        font-size: 13px;
+        color: #99a5b0;
+    }
