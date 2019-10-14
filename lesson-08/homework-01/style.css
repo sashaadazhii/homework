@@ -65,6 +65,8 @@
 }
 
 .center-item {
+    display: flex;
+    align-items: center;
     flex-basis: 185px;
 
 }
