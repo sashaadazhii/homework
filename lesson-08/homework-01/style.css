@@ -58,6 +58,7 @@
 
 .item-description {
     width: 60%;
+    align-items: self-end;
     font-family: 'Miso Light';
     font-size: 30px;
     color:#696969;
