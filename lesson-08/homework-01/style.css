@@ -29,7 +29,8 @@
 
 .item {
     display: flex;
-    flex: 1 0 33.33%;
+    flex: 1 0 auto; /*1 0 33%*/
+    align-items: center;
     max-width: 33.33%;
     padding: 10px;
 }
@@ -80,8 +81,7 @@
     color:#696969;
     text-align: center;
 }
-/*
+
 .center-item {
     padding: 40px 0 45px 0;
 }
-*/
