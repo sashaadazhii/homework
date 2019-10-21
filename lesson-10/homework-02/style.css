@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 50px auto 100px;
+}
+
+/* top info*/
+
+.page-name {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #3c3c3c;
+    text-align: center;
+    padding: 10px;
+}
+
+.hr-block {
+    width: 45px;
+    height: 4px;
+    background-color: #dddbdb;
+    margin: 10px auto;
+}
+
+.page-description {
+    color: #3c3c3c;
+    text-align: center;
+    padding: 30px 25%;
+}
+
+/*container*/
+
+.container {
+    display: flex;
+    padding: 30px 0;
+}
+
+.item {
+    display: flex;
+    flex: 1 0 auto;
+    max-width: 25%;
+    height: 270px;
+    padding: 15px;
+}
+
+.item-container {
+    display: flex;
+    position: relative;
+    margin: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.visible-item {
+    position: absolute;
+    z-index: 2;
+    background: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.item-img {
+    width: 100%;
+}
+
+/*bottom description*/
+.item-description {
+    position: absolute;
+    top: 100%;
+    padding-top: 22px;
+}
+
+.item-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #282528;
+    transition: all .5s ease-in-out;
+}
+
+.description {
+    font-size: 14px;
+    color: #646464;
+}
+
+/*hidden social*/
+.hidden-hover-item {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #62f9be;/*#18b5dc*/
+    transition: all 0.5s ease-in-out;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin: 2px;
+    background-color: rgba(255,255,255,0.3);
+    color:#fff;
+    font-size: 23px;
+}
+
+/*hover*/
+.square-container:hover .hidden-hover-item {
+    z-index: 3;
+    background: #18b5dc;
+}
+
+.social-icon:hover {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.social-icon:hover i {
+    color: #3c3c3c;
+    transition: .5s ease-in-out;
+  }
+
+.social-icon:hover::after {
+    position: absolute;
+    top: 25%;
+    content: 'Go to profile';
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    color:#646464;
+}
+
+.item-name:hover.item-name {
+/*  transform: rotate(360deg);*/
+  color: #18b5dc;
+  font-size: 20px;
+}
+
+
+
