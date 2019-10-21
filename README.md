@@ -46,6 +46,11 @@ Font face
 Editor Font face
 [Lesson-09-02](https://sashaadazhii.github.io/homework/lesson-09/homework-02/index.html)
 
+Food Blot Violet
+[Lesson-10-01](https://sashaadazhii.github.io/homework/lesson-10/homework-01/index.html)
+
+Who We Are Blog 25%
+[Lesson-10-02](https://sashaadazhii.github.io/homework/lesson-10/homework-02/index.html)
 
 
 
