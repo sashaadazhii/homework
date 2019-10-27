@@ -53,7 +53,7 @@ Who We Are Blog 25%
 [Lesson-10-02](https://sashaadazhii.github.io/homework/lesson-10/homework-02/index.html)
 
 BEM 1
-[Lesson-10-02](https://sashaadazhii.github.io/homework/lesson-11/homework-01/index.html)
+[Lesson-11-01](https://sashaadazhii.github.io/homework/lesson-11/homework-01/index.html)
 
 BEM 2 Shop item
-[Lesson-10-02](https://sashaadazhii.github.io/homework/lesson-11/homework-02/index.html)
+[Lesson-11-02](https://sashaadazhii.github.io/homework/lesson-11/homework-02/index.html)
