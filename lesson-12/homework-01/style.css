@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contact-wrapper {
+    background: url(./assets/img/img.jpg) 50% no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.container-contact {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.title-block {
+    max-width: 33%;
+    margin: 0 auto;
+    text-align: center;
+    color: #262626;
+}
+
+.title-block__title {
+    font-size: 90px;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.title-block__description {
+    font-size: 17px;
+    padding: 45px 0;
+}
+
+/*form*/
+.form-block {
+    display: flex;
+}
+
+.form-section {
+    width: 50%;
+}
+
+.contact-form {
+    width: 500px;
+}
+
+.input-wrapper {
+    padding-bottom: 15px;
+}
+
+.form-contact__input {
+    width: 100%;
+    background-color: #00c4c4;
+    opacity: 0.52;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    padding: 20px 15px;
+    border-left: 5px solid rgba(53, 91, 130,0);
+}
+
+::placeholder {
+    color: #fff;
+}
+
+/*onfocus*/
+.form-contact__input:focus {
+    opacity: 1;
+    outline-offset: 0;
+    outline: none;
+    border-left: 5px solid rgba(53, 91, 130,1);
+    font-weight: 700;
+}
+
+/*info-section*/
+.info-block-wrapper {
+    padding-bottom: 20px;
+}
+
+.info-section {
+    padding-left: 85px;
+}
+
+.info-block__title {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.info-block__description {
+    font-size: 20px;
+}
+
+
+/*FOOTER*/
+.footer-wrapper {
+    background-color: #262626;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    height: 85px;
+    color: rgba(255,255,255,0.5);
+    margin: 0 auto;
+}
+
+.copyright {
+    font-size: 16px;
+    opacity: 0.52;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}
+
+.author {
+    font-size: 15px;
+}
+
+.span-red {
+    font-weight: 700;
+    color: #ff2b58;
+}

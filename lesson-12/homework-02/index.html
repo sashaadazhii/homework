@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./assets/plagins/jquery.mask.js"></script>
+    <title>sign up form</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper">
+            <form action="#" method="get" class="form overlay">
+                <ul class="form-menu">
+                    <li class="form-menu__item active"><a href="#" class="form-menu__link">Sign in</a></li>
+                    <li class="form-menu__item"><a href="#" class="form-menu__link">Join us</a></li>
+                </ul>
+
+                <div class="login-wrapper">
+                    <div class="form__item">
+                        <label class="form__label">username</label>
+                        <input type="text" name="username" minlength="5" class="form__input" required>
+                    </div>
+
+                    <div class="form__item">
+                        <label class="form__label">password</label>
+                        <input type="password" name="password" minlength="8" class="form__input" required>
+                    </div>
+
+                    <div class="form__item">
+                        <div class="form-checkbox">
+                            <label for="checkbox" class="form__label form__label--checkbox ">
+                                <input type="checkbox" name="keep" class="checkbox" checked id="checkbox">
+                                Keep me signed in
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="btn-wrapper">
+                        <div class="form__item">
+                            <input type="submit" value="Sign in" name="sign_in" class="btn">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-additional-wrapper">
+                    <div class="form-additional">
+                        <div class="form-additional__item"><a href="#" class="form-additional__link">Forgot password</a>
+                        </div>
+                        <div class="form-additional__item"><a href="#" class="form-additional__link">Create an
+                                account</a> </div>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
