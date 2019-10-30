@@ -21,7 +21,11 @@ a {
     margin-top: 30px;
 }
 
-.container-item {
+.wrapper-right {
+    width: 33%;
+}
+
+.item {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -32,19 +36,22 @@ a {
     z-index: 2;
 }
 
-.container-item__main {
+.item-wrapper {
     display: flex;
     justify-content: space-around;
     min-height: 310px;
 }
 
-.container-item__img {
+.item-img {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
 }
 
-.container-item__pagination-img {
+.pagination {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +61,7 @@ a {
     transform: translateX(-50%);
 }
 
-.circle-pagination {
+.pagination__controls {
     width: 9px;
     height: 9px;
     border-radius: 50%;
@@ -62,66 +69,63 @@ a {
     margin: 5px;
 }
 
-.circle-pagination:hover {
+.pagination__controls:hover {
     cursor: pointer;
 }
 
-.circle-pagination--active {
+.pagination__controls--active {
     border: 2px solid #7b8088;
     box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.82);
     box-sizing: unset;
 }
 
-.circle-pagination--white {
+.pagination__controls--white {
     background-color: #fff;
 }
 
-.circle-pagination--red {
+.pagination__controls--red {
     background-color: #ed3333;
 }
 
-.circle-pagination--blue {
+.pagination__controls--blue {
     background-color: #29e3ea;
 }
 
-.container-item__properties {
-    width: 33%;
-}
 
-.container-item__name {
+.item-properties__name {
     font-size: 24px;
     color: #e1e1e1;
 }
 
-.container-item__subname {
+.item-properties__subname {
     font-size: 14px;
     opacity:0.541;
 }
 
-.container-item__rate {
+.rate {
     display: flex;
     padding: 25px 0;
 }
 
-.container-item__rate .material-icons {
+.rate .material-icons {
     font-size: 17px;
 }
 
-.icon-rated {
+.rate__icon {
     color: #f7bf16;
 }
 
-.icon-empty {
+.rate-empty {
     opacity:0.541;
 }
 
-.container-item__variations {
+.variations {
     display: flex;
     padding-bottom: 30px;
 
 }
 
-.container-item__variations__item {
+.variations__item {
     width: 69px;
     height: 32px;
     opacity: 0.541;
@@ -131,7 +135,7 @@ a {
     margin: 1px;
 }
 
-.container-item__variations__item:hover {
+.variations__item:hover {
     cursor: pointer;
 }
 
