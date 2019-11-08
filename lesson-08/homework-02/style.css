@@ -49,7 +49,18 @@
         flex: 1 0 auto; /*flex: 1 0 33.33%;*/
         max-width: 33.33%;
         padding: 10px;
+    }
 
+    @media screen and (max-width: 860px) {
+        .item {
+            max-width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+        .item {
+            max-width: 100%;
+        }
     }
 
     .item-container {
@@ -69,6 +80,15 @@
         flex: 66.66%; /*2 0 66%*/
         max-width: 66.66%;
     }
+
+    @media screen and (max-width: 860px) {
+        .main-item{
+            flex: 100%;
+            max-width: 100%;
+            min-height: 500px;
+        }
+    }
+
 
     .main-item .item-header {
         flex: 0;
@@ -139,3 +159,4 @@
         font-size: 13px;
         color: #99a5b0;
     }
+
