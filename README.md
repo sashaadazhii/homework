@@ -74,5 +74,5 @@ SASS
 @media Landing
 [Lesson-15-01](https://sashaadazhii.github.io/homework/lesson-15/homework-01/index.html)
 
-@media SASS Cachee
+Cachee
 [Lesson-16-01](https://sashaadazhii.github.io/homework/lesson-16/homework-01/index.html)
