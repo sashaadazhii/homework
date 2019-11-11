@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/41c7df2727.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Cachee</title>
@@ -16,19 +17,36 @@
         <div class="main-menu">
             <div class="main-menu-logo"><a href="#" class="main-menu-logo__link">Cachee</a></div>
 
-            <nav class="main-menu-nav">
-                <div class="main-menu-nav__item"><a href="#"
+
+            <label for="checkbox" class="toggler">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <input type="checkbox" name="menu" id="checkbox">
+
+            <ul class="main-menu-nav">
+                <li class="main-menu-nav__item"><a href="#"
                         class="main-menu-nav__link main-menu-nav__link--active">home</a>
-                </div>
-                <div class="main-menu-nav__item"><a href="#" class="main-menu-nav__link">about</a></div>
-                <div class="main-menu-nav__item"><a href="#" class="main-menu-nav__link">service</a></div>
-                <div class="main-menu-nav__item"><a href="#" class="main-menu-nav__link">gallery</a></div>
-                <div class="main-menu-nav__item"><a href="#" class="main-menu-nav__link">blog</a></div>
-                <div class="main-menu-nav__item"><a href="#" class="main-menu-nav__link">contact</a></div>
-            </nav>
+                </li>
+                <li class="main-menu-nav__item"><a href="#" class="main-menu-nav__link">about</a></li>
+                <li class="main-menu-nav__item"><a href="#" class="main-menu-nav__link">service</a></li>
+                <li class="main-menu-nav__item"><a href="#" class="main-menu-nav__link">gallery</a></li>
+                <li class="main-menu-nav__item"><a href="#" class="main-menu-nav__link">blog</a></li>
+                <li class="main-menu-nav__item"><a href="#" class="main-menu-nav__link">contact</a></li>
+            </ul>
+
         </div>
 
         <div class="slider-wrapper">
+
+            <!-- <img srcset="./assets/img/img2-580.jpg 580w,
+                         ./assets/img/img2-900.jpg 900w,
+                        ./assets/img/img2.jpg 901w" sizes="(max-width: 580px) 580px,
+                (max-width: 900px) 900px,
+                (min-width: 901px)
+                " src="./assets/img/img2.jpg" alt="header"> -->
+
+
             <div class="slider">
                 <div class="slider__title">Fresh life</div>
                 <div class="slider__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
@@ -44,7 +62,9 @@
         <div class="wrapper wrapper-colored">
             <div class="article">
                 <div class="article__img">
-                    <img src="./assets/img/img1.png" alt="info img" class="container__img">
+                    <img srcset="./assets/img/img1-350.png 560w,
+                                ./assets/img/img1.png 768w" sizes="(max-width: 560px) 310px,
+                                768px" src="./assets/img/img1.png" alt="cup">
                 </div>
                 <div class="widget widget--left">
                     <div class="widget__title">about us</div>

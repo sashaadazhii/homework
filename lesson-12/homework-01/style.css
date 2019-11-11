@@ -23,8 +23,8 @@ a {
     margin: 0 auto;
 }
 .title-block {
-    width: 100%;
-    max-width: 350px;
+    width: 350px;
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
     color: #262626;

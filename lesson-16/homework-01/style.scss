@@ -9,7 +9,7 @@
 $color-basic:#fff;
 $color-primary: #262626;
 $color-active:#ff6033;
-$color-bgr1:hsl(180, 100%, 35%);
+$color-bgr1:#00b1b1;
 $color-bgr2:#b07cf7;
 
 $font-primary:'Raleway', sans-serif;
@@ -17,7 +17,7 @@ $font-bold:'Raleway Heavy';
 $font-logo: 'Pacifico', cursive;
 
 $tablet: 900px;
-$phablet: 760px;
+$phablet: 768px;
 $mobile: 580px;
 
 @mixin tablet {
@@ -50,6 +50,10 @@ a {
     color: inherit;
 }
 
+ul {
+    list-style-type: none;
+}
+
 /*HEADER*/
 
 .header {
@@ -69,41 +73,93 @@ a {
         padding: 15px;
         color: $color-primary;
 
-        @include tablet  {
-            flex-direction: column;
-        }
+        .main-menu-logo {
+            font-family: $font-logo;
+            font-size: 50px;
 
-            .main-menu-logo {
-                font-family: $font-logo;
-                font-size: 50px;
-
-                    &__link {
-                        color: $color-primary;
-                    }
-                }
-
-            .main-menu-nav {
-                display: flex;
-                justify-content: space-between;
-                width: 50%;
-
-                @include tablet  {
-                    width: 100%;
-                }
-            
                 &__link {
-                    font-family: $font-primary;
-                    font-size: 16px;
-                    font-weight: 700;
-                    text-transform: uppercase;
                     color: $color-primary;
                 }
-
-                &__link--active {
-                    padding: 9px 0;
-                    border-top: 3px solid $color-active;
-                }
             }
+
+        .toggler {
+            display: none;
+            position: absolute;
+            right: 15px;
+            width: 42px;
+            height: 42px;
+
+            @include tablet  {
+                display: block;
+            }
+
+            i {
+                font-size: 42px;
+                color: $color-active;
+            }
+        }
+        
+
+        #checkbox {
+            position: absolute;
+            top: -9999px;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #checkbox:checked + .main-menu-nav {
+            position: absolute;
+            top: 100px;
+            right: 0;
+            width: 100%;
+            height: 230px;
+            display: flex;
+            flex-direction: column;
+            background-color: #ccc;
+            text-align: center;
+            opacity: 0.9; 
+        }
+    }
+
+        .main-menu-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+
+            @include tablet  {
+                height: 0;
+                overflow: hidden;
+                transition: height 0.4s;  
+            }
+
+            &__link--active {
+                border-top: 3px solid $color-active;
+            }
+
+            &__item {
+                padding: 9px 0;
+
+                @include tablet  {
+                    border-bottom: 1px dotted;
+
+                    &:hover,
+                    &:active {
+                        background-color: $color-basic;
+
+                        .main-menu-nav__link {
+                        border-top: 3px solid $color-active;
+                        }
+                    }
+                }           
+            }
+
+            &__link {
+                font-family: $font-primary;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $color-primary;     
+            } 
         }
 
     .slider-wrapper {
@@ -129,6 +185,11 @@ a {
             font-size: 60px;
             text-transform: capitalize;
             color: $color-primary;
+
+            @include mobile {
+                font-size: 40px;
+            }
+            
         }
 
         &__description {
@@ -138,6 +199,10 @@ a {
             line-height: 24px;
             color: $color-primary;
             padding: 35px 0;
+
+            @include mobile {
+                width: 100%;
+            }
         }
 
         &__scroll {
@@ -165,6 +230,11 @@ a {
         font-weight: 700;
         text-transform: capitalize;
         padding-bottom: 30px;
+
+        @include mobile {
+            font-size: 60px;
+            padding: 0 10px;
+        }
     }
 
     .widget__subscribe {
@@ -178,6 +248,11 @@ a {
 .widget--left {
     text-align: unset;
     padding-left: 80px;
+
+    @include mobile {
+        text-align:center;
+        padding: 0 10px;
+    }
 }
 
 .widget--dark {
@@ -193,7 +268,6 @@ a {
     }
 }
 
-
 .wrapper-colored {
     background-color: $color-bgr1;
 
@@ -208,19 +282,19 @@ a {
         align-items: center;
     }
 
-        &__img {
-            width: 550px;
-            padding: 70px 0;
+        // &__img {
+        //     width: 550px;
+        //     padding: 70px 0;
 
-        @include mobile  {
-            max-width: 80%;
-            padding: 50px 0;
+        // @include phablet  {
+        //     max-width: 80%;
+        //     padding: 50px 0;
 
-                img {
-                    width: 100%;
-                }
-            }
-        }
+        //         img {
+        //             width: 100%;
+        //         }
+        //     }
+        // }
     }
 }
 
@@ -232,8 +306,14 @@ a {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        max-width: 1200px;
+        width: 1200px;
+        max-width: 100%;
         margin: 0 auto;
+
+        @include phablet {
+            flex-direction: column;
+            width: 100%;
+        }
    
         .item {
             display: flex;
@@ -243,6 +323,13 @@ a {
             height: 310px;
             box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease-in-out;
+
+            @include phablet {
+                width: 310px;
+                height: 310px;
+                margin: 10px 0;
+                max-width: 100%;
+            }
 
             &:hover {
                 box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.5);
