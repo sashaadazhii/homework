@@ -77,4 +77,4 @@ Cachee lesson 16-17
 [Lesson-16-17-01](https://sashaadazhii.github.io/homework/lesson-16/homework-01/index.html)
 
 team-3-esculap
-[Lesson-18 team-3-esculap](https://sashaadazhii.github.io/homework/lesson-18%20team-3-esculap/index.html)
+[Lesson-18 team-3-esculap](https://sashaadazhii.github.io/homework/lesson-18-team-3-esculap/index.html)
