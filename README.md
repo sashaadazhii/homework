@@ -64,7 +64,6 @@ Form Contacts
 Form Sign in
 [Lesson-12-02](https://sashaadazhii.github.io/homework/lesson-12/homework-02/index.html)
 
-
 SVG Landing
 [Lesson-13-01](https://sashaadazhii.github.io/homework/lesson-13-1/homework-01/index.html)
 
