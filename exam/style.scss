@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*------------------variables------------------*/
+$font-primary: 'Aleo', serif;
+$font-secondary: 'Josefin Sans', sans-serif;
+$fsize-primary: 14px;
+$fsize-title: 20px;
+$fsize-title-large: 36px;
+$fsize-text: 16px;
+$weight-regular: 400;
+$weight-bold: 700;
+$uppercase: uppercase;
+$capitalize: capitalize;
+$color-basic: #fff;
+$color-primary: #5474fd;
+$color-secondary: #999;
+$color-bgr: #333;
+$color-block:#353535;
+$color-footer: #232323;
+
+$tablet-screen-width: 768px;
+$phablet-screen-width: 700px;
+$mobile-screen-width: 500px;
+
+/*------------------mixins------------------*/
+@mixin font($font, $size, $weight, $color, $transform) { 
+        font-family: $font;
+        font-size: $size;
+        font-weight: $weight;
+        color: $color;   
+        text-transform: $transform;
+}
+
+@mixin tablet {
+    @media only screen and (max-width: #{$tablet-screen-width}) {
+        @content;
+    }
+}
+
+@mixin phablet {
+    @media only screen and (max-width: #{$phablet-screen-width}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media only screen and (max-width: #{$mobile-screen-width}) {
+        @content;
+    }
+}
+
+.container {
+    width: 1170px;
+    max-width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+/*logo*/
+.logo {
+
+    &__link {
+        @include font($font-secondary, $fsize-title, $weight-bold, $color-basic, $uppercase);
+    
+        &--large {
+            font-size: 48px;
+            letter-spacing: 10px;
+
+            @include mobile {
+                font-size: $fsize-title-large;
+            }
+        }
+    }
+
+    &__desc {
+        @include font($font-primary, $fsize-primary, $weight-regular, $color-basic, $capitalize);
+        padding: 15px 0;
+   
+        &--large {
+            padding: 20px 0;
+            font-size: 24px;
+            letter-spacing: 9px;
+            opacity: 0.8; 
+        }
+    }
+}
+/*end of logo*/
+
+
+/*btn*/
+.btn-container {
+    padding: 30px 0;
+}
+
+.btn {
+    min-width: 225px;
+    padding: 25px;
+    background: linear-gradient(45deg, rgb(73, 107, 254) 50%, rgb(84, 116, 253) 50%);
+    border: none;
+    @include font($font-primary, $fsize-text, $weight-regular, $color-basic, $uppercase);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+    &--input {
+        min-width: 150px;
+        max-height: 56px;
+        padding-top: 15px;
+        background: $color-primary;
+        outline: 2px solid white;
+   
+        &::after {
+            content: '\f002';
+            font-family: 'FontAwesome';
+            font-size: $fsize-title;
+            margin-left: 15px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: $color-secondary;
+            outline: 2px solid white;
+        }
+
+        @include phablet {
+            max-width: 110px;
+        }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+/*end of btn*/
+
+
+/*title*/
+.title {
+    padding: 30px 0 25px;
+    @include font($font-secondary, $fsize-title, $weight-regular, $color-basic, $uppercase);
+
+
+    &--large {
+        padding: 50px 0;
+        @include font($font-primary, $fsize-title-large, $weight-regular, $color-basic, $capitalize);
+   
+
+        @include tablet {
+            font-size: $fsize-title;
+            font-weight: $weight-bold;
+        }
+   
+   
+    }
+}
+/*end of title*/
+
+
+/*header*/
+.header {
+    height: 100vh;
+    background: url(./assets/img/header.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
+.header-main {
+    height: 100%;
+    
+    .container {
+        height: 100%;
+
+        .header-content {
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+.form-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    @include phablet {
+        max-width: 100%;
+    }
+
+    .search-form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        &__input {
+            height: 60px;
+            width: 500px;
+            max-width: 100%;
+            padding: 25px 0;
+            @include font($font-secondary, $fsize-primary, $weight-regular, $color-secondary, $capitalize);
+            text-align: center;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+}
+
+    .scroll {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 33%;
+        @include font($font-secondary, $fsize-primary, $weight-regular, $color-basic, $capitalize);
+        opacity: 0.7;
+
+        &__desc {
+            padding: 15px;
+        }
+    }
+
+.main-menu {
+    transform: translateY(-100%);
+    background-color: $color-primary;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .menu {
+            display: flex;
+    
+            &__item {
+                padding: 0 20px;
+                @include font($font-primary, $fsize-primary, $weight-regular, $color-basic, $uppercase);
+                text-align: center;
+                transition: all 0.2s ease-in-out;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    cursor: pointer;
+                    color: $color-footer;
+                }
+
+                @include tablet {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+/*end  of header*/
+
+/*main*/
+.description {
+    background: url(./assets/img/bgr1.jpg) 50% no-repeat;
+    background-size: cover;
+    min-height: 680px;
+}
+
+.description-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .block--transparent {
+        // width: 50%;
+        // padding: 30px 0;
+        background-color: transparent;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        &__desc {
+            padding: 15px 10px 15px 0;
+            @include font($font-secondary, $fsize-text, $weight-regular, $color-basic, none);
+            line-height: 26px;
+            text-align: justify;
+            opacity: 0.8;
+        }
+
+    }
+
+    .image-block {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        width: 50%;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        &__right {
+            width: 350px;
+            height: 220px;
+            background: url(./assets/img/Image1.jpg) 50% no-repeat;
+            background-size: cover;
+        }
+
+        &__left {
+            width: 350px;
+            height: 220px;
+            background: url(./assets/img/header.jpg) 50% no-repeat;
+            background-size: cover;
+            align-self: flex-end;
+        }
+    }
+}
+
+.icon-svg {
+    max-width: 62px;
+    max-height: 62px;
+}
+
+
+
+.icons {
+    background-color: $color-bgr;
+}
+
+.list-icon {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__item {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+// .bubble-abs {
+//     position: absolute;
+//     width:300px;
+//     height: 300px;
+//     border-radius: 50%;
+//     border-top: 1px dotted $color-basic;
+// }
+
+.content {
+    min-height: 700px;
+}
+.content--first {
+    background: url(./assets/img/bgr2.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
+.content--second {
+    background: url(./assets/img/bgr3.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
+.block-wrapper {
+    width:50%;
+
+    &--left {
+        float: right;
+    }
+}
+
+.block {
+    width: 100%;
+    min-height: 370px;
+    padding: 25px;
+    background-color: $color-block;
+    opacity: 0.92;
+
+    &__subtitle {
+        padding: 25px 0;
+        @include font($font-secondary, $fsize-title, $weight-regular, $color-basic, $capitalize);
+    }
+
+    &__desc {
+        @include font($font-secondary, $fsize-text, $weight-regular, $color-basic, $capitalize);
+        line-height: 26px;
+    }
+}
+
+
+
+
+
