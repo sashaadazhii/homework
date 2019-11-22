@@ -206,7 +206,7 @@ ul {
     .description-container .image-block__right {
       width: 350px;
       height: 220px;
-      background: url(./assets/img/Image1.jpg) 50% no-repeat;
+      background: url(./assets/img/image1.jpg) 50% no-repeat;
       background-size: cover; }
     .description-container .image-block__left {
       width: 350px;
@@ -288,3 +288,53 @@ ul {
     .block--transparent .block__desc {
       padding: 15px;
       text-align: justify; }
+
+.quotations {
+  min-height: 730px;
+  background: url(./assets/img/bgr4.jpg) 50% no-repeat;
+  background-size: cover; }
+  .quotations .title {
+    text-align: center; }
+
+.quote {
+  display: flex;
+  flex-flow: row wrap; }
+  .quote__left {
+    width: 40%;
+    min-width: 445px;
+    min-height: 285px; }
+    @media only screen and (max-width: 768px) {
+      .quote__left {
+        width: 100%; } }
+  .quote__img {
+    width: 100%;
+    height: 100%;
+    background: url(./assets/img/image2.jpg) 50% no-repeat;
+    background-size: cover; }
+  .quote__right .fas {
+    margin-top: 35px;
+    padding-right: 10px;
+    transform: translateY(-100%);
+    color: #5474fd; }
+
+/*end of main*/
+/*footer*/
+.footer-info {
+  background-color: #232323;
+  text-align: center; }
+
+.social {
+  display: flex;
+  justify-content: center; }
+  .social__item {
+    padding: 12px;
+    color: #fff;
+    transition: all 0.3s ease-in-out; }
+    .social__item--active {
+      color: #5474fd; }
+    .social__item:hover {
+      cursor: pointer;
+      color: #5474fd; }
+    .social__item:hover ~ .social__item--active,
+    .social__item:hover + .social__item {
+      color: #fff; }
