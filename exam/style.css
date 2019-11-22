@@ -88,23 +88,16 @@ ul {
 /*end of btn*/
 /*title*/
 .title {
-  padding: 30px 0 25px;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 20px;
+  padding: 50px 0;
+  font-family: "Aleo", serif;
+  font-size: 36px;
   font-weight: 400;
   color: #fff;
-  text-transform: uppercase; }
-  .title--large {
-    padding: 50px 0;
-    font-family: "Aleo", serif;
-    font-size: 36px;
-    font-weight: 400;
-    color: #fff;
-    text-transform: capitalize; }
-    @media only screen and (max-width: 768px) {
-      .title--large {
-        font-size: 20px;
-        font-weight: 700; } }
+  text-transform: capitalize; }
+  @media only screen and (max-width: 768px) {
+    .title {
+      font-size: 20px;
+      font-weight: 700; } }
 
 /*end of title*/
 /*header*/
@@ -202,21 +195,6 @@ ul {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center; }
-  .description-container .block--transparent {
-    background-color: transparent; }
-    @media only screen and (max-width: 768px) {
-      .description-container .block--transparent {
-        width: 100%; } }
-    .description-container .block--transparent__desc {
-      padding: 15px 10px 15px 0;
-      font-family: "Josefin Sans", sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      color: #fff;
-      text-transform: none;
-      line-height: 26px;
-      text-align: justify;
-      opacity: 0.8; }
   .description-container .image-block {
     display: flex;
     flex-flow: column wrap;
@@ -266,6 +244,9 @@ ul {
 
 .block-wrapper {
   width: 50%; }
+  @media only screen and (max-width: 768px) {
+    .block-wrapper {
+      width: 100%; } }
   .block-wrapper--left {
     float: right; }
 
@@ -274,18 +255,36 @@ ul {
   min-height: 370px;
   padding: 25px;
   background-color: #353535;
-  opacity: 0.92; }
+  opacity: 0.9; }
   .block__subtitle {
     padding: 25px 0;
     font-family: "Josefin Sans", sans-serif;
     font-size: 20px;
     font-weight: 400;
     color: #fff;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    opacity: 0.9; }
+  .block__title {
+    padding: 30px 0 25px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase; }
+    @media only screen and (max-width: 768px) {
+      .block__title {
+        font-size: 20px;
+        font-weight: 700; } }
   .block__desc {
     font-family: "Josefin Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #fff;
     text-transform: capitalize;
-    line-height: 26px; }
+    line-height: 26px;
+    opacity: 0.9; }
+  .block--transparent {
+    background-color: transparent; }
+    .block--transparent .block__desc {
+      padding: 15px;
+      text-align: justify; }

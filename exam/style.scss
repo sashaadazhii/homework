@@ -151,24 +151,14 @@ $mobile-screen-width: 500px;
 }
 /*end of btn*/
 
-
 /*title*/
 .title {
-    padding: 30px 0 25px;
-    @include font($font-secondary, $fsize-title, $weight-regular, $color-basic, $uppercase);
+    padding: 50px 0;
+    @include font($font-primary, $fsize-title-large, $weight-regular, $color-basic, $capitalize);
 
-
-    &--large {
-        padding: 50px 0;
-        @include font($font-primary, $fsize-title-large, $weight-regular, $color-basic, $capitalize);
-   
-
-        @include tablet {
-            font-size: $fsize-title;
-            font-weight: $weight-bold;
-        }
-   
-   
+    @include tablet {
+        font-size: $fsize-title;
+        font-weight: $weight-bold;
     }
 }
 /*end of title*/
@@ -226,19 +216,19 @@ $mobile-screen-width: 500px;
     }
 }
 
-    .scroll {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 33%;
-        @include font($font-secondary, $fsize-primary, $weight-regular, $color-basic, $capitalize);
-        opacity: 0.7;
+.scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 33%;
+    @include font($font-secondary, $fsize-primary, $weight-regular, $color-basic, $capitalize);
+    opacity: 0.7;
 
-        &__desc {
-            padding: 15px;
-        }
+    &__desc {
+        padding: 15px;
     }
+}
 
 .main-menu {
     transform: translateY(-100%);
@@ -272,7 +262,6 @@ $mobile-screen-width: 500px;
         }
     }
 }
-
 /*end  of header*/
 
 /*main*/
@@ -287,25 +276,6 @@ $mobile-screen-width: 500px;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-
-    .block--transparent {
-        // width: 50%;
-        // padding: 30px 0;
-        background-color: transparent;
-
-        @include tablet {
-            width: 100%;
-        }
-
-        &__desc {
-            padding: 15px 10px 15px 0;
-            @include font($font-secondary, $fsize-text, $weight-regular, $color-basic, none);
-            line-height: 26px;
-            text-align: justify;
-            opacity: 0.8;
-        }
-
-    }
 
     .image-block {
         display: flex;
@@ -339,8 +309,6 @@ $mobile-screen-width: 500px;
     max-height: 62px;
 }
 
-
-
 .icons {
     background-color: $color-bgr;
 }
@@ -357,17 +325,11 @@ $mobile-screen-width: 500px;
     }
 }
 
-// .bubble-abs {
-//     position: absolute;
-//     width:300px;
-//     height: 300px;
-//     border-radius: 50%;
-//     border-top: 1px dotted $color-basic;
-// }
 
 .content {
     min-height: 700px;
 }
+
 .content--first {
     background: url(./assets/img/bgr2.jpg) 50% no-repeat;
     background-size: cover;
@@ -381,6 +343,10 @@ $mobile-screen-width: 500px;
 .block-wrapper {
     width:50%;
 
+    @include tablet {
+        width: 100%;
+    }
+
     &--left {
         float: right;
     }
@@ -391,18 +357,40 @@ $mobile-screen-width: 500px;
     min-height: 370px;
     padding: 25px;
     background-color: $color-block;
-    opacity: 0.92;
+    opacity: 0.9;
 
     &__subtitle {
         padding: 25px 0;
         @include font($font-secondary, $fsize-title, $weight-regular, $color-basic, $capitalize);
+        opacity: 0.9;
+    }
+
+    &__title {
+        padding: 30px 0 25px;
+        @include font($font-secondary, $fsize-title, $weight-regular, $color-basic, $uppercase);
+   
+        @include tablet {
+            font-size: $fsize-title;
+            font-weight: $weight-bold;
+        }
     }
 
     &__desc {
         @include font($font-secondary, $fsize-text, $weight-regular, $color-basic, $capitalize);
         line-height: 26px;
+        opacity: 0.9;
+    }
+
+    &--transparent {
+        background-color: transparent;
+    
+        .block__desc {
+            padding: 15px;
+            text-align: justify;
+        }
     }
 }
+
 
 
 
