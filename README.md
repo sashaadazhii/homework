@@ -78,3 +78,6 @@ Cachee lesson 16-17
 
 team-3-esculap
 [Lesson-18-team-3-esculap](https://sashaadazhii.github.io/homework/lesson-18-team-3-esculap/index.html)
+
+exam Travel blog
+[exam](https://sashaadazhii.github.io/homework/exam/index.html)
