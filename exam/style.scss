@@ -67,8 +67,12 @@ $mobile-screen-width: 500px;
 .container {
     width: 1170px;
     max-width: 100%;
-    padding: 30px;
+    padding:  0 30px;
     margin: 0 auto;
+
+    @include phablet {
+        padding: 0 15px;
+    }
 }
 
 /*logo*/
@@ -114,7 +118,15 @@ $mobile-screen-width: 500px;
     border: none;
     @include font($font-primary, $fsize-text, $weight-regular, $color-basic, $uppercase);
     text-align: center;
-    transition: all 0.3s ease-in-out;
+    transition: all 1s ease-in-out;
+    
+
+    &:hover,
+    &:active,
+    &:focus {
+        cursor: pointer;
+        background: linear-gradient(-45deg, rgb(73, 107, 254) 50%, rgb(84, 116, 253) 50%);
+    }
 
     &--input {
         min-width: 150px;
@@ -141,19 +153,12 @@ $mobile-screen-width: 500px;
             max-width: 110px;
         }
     }
-
-    &:hover,
-    &:active,
-    &:focus {
-        cursor: pointer;
-        opacity: 0.8;
-    }
 }
 /*end of btn*/
 
 /*title*/
 .title {
-    padding: 50px 0;
+    padding-bottom: 45px;
     @include font($font-primary, $fsize-title-large, $weight-regular, $color-basic, $capitalize);
 
     @include tablet {
@@ -166,6 +171,7 @@ $mobile-screen-width: 500px;
 
 /*header*/
 .header {
+    position: relative;
     height: 100vh;
     background: url(./assets/img/header.jpg) 50% no-repeat;
     background-size: cover;
@@ -231,10 +237,12 @@ $mobile-screen-width: 500px;
 }
 
 .main-menu {
+    padding: 35px 0;
     transform: translateY(-100%);
     background-color: $color-primary;
 
     .nav {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -246,7 +254,7 @@ $mobile-screen-width: 500px;
                 padding: 0 20px;
                 @include font($font-primary, $fsize-primary, $weight-regular, $color-basic, $uppercase);
                 text-align: center;
-                transition: all 0.2s ease-in-out;
+                transition: all 0.3s ease-in-out;
 
                 &:hover,
                 &:active,
@@ -254,21 +262,79 @@ $mobile-screen-width: 500px;
                     cursor: pointer;
                     color: $color-footer;
                 }
+            }
 
-                @include tablet {
-                    padding: 0 10px;
+            @include tablet {
+                position: absolute;
+                top: 30px;
+                height: 0;
+                transform: translateY(-100%);
+                background-color: $color-basic;
+                color: $color-bgr;
+                overflow: hidden;
+                transition: height 0.4s; 
+
+                .menu__item {
+                    padding: 15px;
+                    color: $color-bgr;
+
+                    &:hover,
+                    &:active {
+                        color: $color-primary;
+                    }
                 }
             }
+
+            @include tablet {
+                &:hover,
+                &:active {
+                   flex-direction: column;
+                   width: 100%;
+                   height: 200px;
+                   border-radius: 9px;
+                   text-align: center;
+               }
+           }
+        }
+    }
+}
+
+.toggler {
+    display: none;
+    position: absolute;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+
+    .fas {
+        font-size: 42px;
+        color: $color-basic;
+    }
+
+    @include tablet  {
+        display: block;
+
+        &:hover + .menu,
+        &:active + .menu {
+            // position: absolute;
+            flex-direction: column;
+            width: 100%;
+            height: 200px;
+            border-radius: 9px;
+            transform: translateY(-100%);
+            background-color: $color-basic;
         }
     }
 }
 /*end  of header*/
 
+
 /*main*/
 .description {
+    min-height: 680px;
+    padding: 120px 0;
     background: url(./assets/img/bgr1.jpg) 50% no-repeat;
     background-size: cover;
-    min-height: 680px;
 }
 
 .description-container {
@@ -292,6 +358,10 @@ $mobile-screen-width: 500px;
             height: 220px;
             background: url(./assets/img/image1.jpg) 50% no-repeat;
             background-size: cover;
+            
+            @include mobile {
+                width: 100%;
+            }
         }
 
         &__left {
@@ -300,6 +370,10 @@ $mobile-screen-width: 500px;
             background: url(./assets/img/header.jpg) 50% no-repeat;
             background-size: cover;
             align-self: flex-end;
+        
+            @include mobile {
+                width: 100%;
+            }
         }
     }
 }
@@ -310,6 +384,7 @@ $mobile-screen-width: 500px;
 }
 
 .icons {
+    padding: 100px 0 90px;
     background-color: $color-bgr;
 }
 
@@ -318,26 +393,38 @@ $mobile-screen-width: 500px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    // background: url(./assets/img/Shape.png) 50% no-repeat;
 
     &__item {
         margin: 0 auto;
         text-align: center;
+
+        .title {
+            padding: 30px 0;           
+        }
     }
 }
 
+// .shape {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     background: url(./assets/img/Shape.png) 50% no-repeat;
+// }
 
 .content {
     min-height: 700px;
-}
+    padding: 230px 0 100px;
 
-.content--first {
-    background: url(./assets/img/bgr2.jpg) 50% no-repeat;
-    background-size: cover;
-}
+    &--first {
+        background: url(./assets/img/bgr2.jpg) 50% no-repeat;
+        background-size: cover;
+    }
 
-.content--second {
-    background: url(./assets/img/bgr3.jpg) 50% no-repeat;
-    background-size: cover;
+    &--second {
+        background: url(./assets/img/bgr3.jpg) 50% no-repeat;
+        background-size: cover;
+    }
 }
 
 .block-wrapper {
@@ -385,7 +472,7 @@ $mobile-screen-width: 500px;
         background-color: transparent;
     
         .block__desc {
-            padding: 15px;
+            padding: 15px 0;
             text-align: justify;
         }
     }
@@ -393,6 +480,7 @@ $mobile-screen-width: 500px;
 
 .quotations {
     min-height: 730px;
+    padding: 120px 0;
     background: url(./assets/img/bgr4.jpg) 50% no-repeat;
     background-size: cover;
 
@@ -403,15 +491,23 @@ $mobile-screen-width: 500px;
 
 .quote {
     display: flex;
-    flex-flow: row wrap;
+    height: 285px;
+
+    @include tablet {
+        flex-direction: column;
+        min-height: 570px;
+    }
+
+    @include mobile {
+        height: auto;
+    }
 
     &__left {
         width: 40%;
-        min-width: 445px;
-        min-height: 285px;
 
         @include tablet {
             width: 100%;
+            height: 285px;
         }
     }
 
@@ -423,6 +519,13 @@ $mobile-screen-width: 500px;
     }
 
     &__right {
+        width: 60%;
+        overflow: hidden;
+
+        @include tablet {
+            width: 100%;
+        }
+
         .fas {
             margin-top: 35px;
             padding-right: 10px;
@@ -435,6 +538,7 @@ $mobile-screen-width: 500px;
 
 /*footer*/
 .footer-info {
+    padding: 120px 0 55px;
     background-color: $color-footer;
     text-align: center;
 }
@@ -448,27 +552,21 @@ $mobile-screen-width: 500px;
         color: $color-basic;
         transition: all 0.3s ease-in-out;
 
-        &--active {
-            color: $color-primary;
-        }
-
         &:hover  {
             cursor: pointer;
             color: $color-primary;
+        }
 
-           
+        &--active {
+            color: $color-primary;
         }
-        &:hover ~ .social__item--active,
-        &:hover + .social__item {
-            color: $color-basic;
-        }
-       
     }
 }
-
-
-
-
+     
+.social:hover .social__item:not(:hover) {
+    color: $color-basic;
+    cursor: pointer;
+}
 
 
 
