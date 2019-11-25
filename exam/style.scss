@@ -1,8 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -236,7 +234,7 @@ $mobile-screen-width: 500px;
     }
 }
 
-.main-menu {
+.header-menu {
     padding: 35px 0;
     transform: translateY(-100%);
     background-color: $color-primary;
@@ -327,6 +325,7 @@ $mobile-screen-width: 500px;
     }
 }
 /*end  of header*/
+
 
 /*main*/
 .description {
@@ -536,7 +535,7 @@ $mobile-screen-width: 500px;
 /*end of main*/
 
 /*footer*/
-.footer-info {
+.bottom-info {
     padding: 120px 0 55px;
     background-color: $color-footer;
     text-align: center;
@@ -566,5 +565,3 @@ $mobile-screen-width: 500px;
     color: $color-basic;
     cursor: pointer;
 }
-
-

@@ -1,8 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 a {
@@ -162,18 +160,18 @@ ul {
   .scroll__desc {
     padding: 15px; }
 
-.main-menu {
+.header-menu {
   padding: 35px 0;
   transform: translateY(-100%);
   background-color: #5474fd; }
-  .main-menu .nav {
+  .header-menu .nav {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .main-menu .nav .menu {
+    .header-menu .nav .menu {
       display: flex; }
-      .main-menu .nav .menu__item {
+      .header-menu .nav .menu__item {
         padding: 0 20px;
         font-family: "Aleo", serif;
         font-size: 14px;
@@ -182,11 +180,11 @@ ul {
         text-transform: uppercase;
         text-align: center;
         transition: all 0.3s ease-in-out; }
-        .main-menu .nav .menu__item:hover, .main-menu .nav .menu__item:active, .main-menu .nav .menu__item:focus {
+        .header-menu .nav .menu__item:hover, .header-menu .nav .menu__item:active, .header-menu .nav .menu__item:focus {
           cursor: pointer;
           color: #232323; }
       @media only screen and (max-width: 768px) {
-        .main-menu .nav .menu {
+        .header-menu .nav .menu {
           position: absolute;
           top: 30px;
           height: 0;
@@ -195,13 +193,13 @@ ul {
           color: #333;
           overflow: hidden;
           transition: height 0.4s; }
-          .main-menu .nav .menu .menu__item {
+          .header-menu .nav .menu .menu__item {
             padding: 15px;
             color: #333; }
-            .main-menu .nav .menu .menu__item:hover, .main-menu .nav .menu .menu__item:active {
+            .header-menu .nav .menu .menu__item:hover, .header-menu .nav .menu .menu__item:active {
               color: #5474fd; } }
       @media only screen and (max-width: 768px) {
-        .main-menu .nav .menu:hover, .main-menu .nav .menu:active {
+        .header-menu .nav .menu:hover, .header-menu .nav .menu:active {
           flex-direction: column;
           width: 100%;
           height: 200px;
@@ -387,7 +385,7 @@ ul {
 
 /*end of main*/
 /*footer*/
-.footer-info {
+.bottom-info {
   padding: 120px 0 55px;
   background-color: #232323;
   text-align: center; }
