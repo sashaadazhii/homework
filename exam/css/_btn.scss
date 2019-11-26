@@ -1,0 +1,47 @@
+.btn-container {
+    padding: 30px 0;
+}
+
+.btn {
+    min-width: 225px;
+    padding: 25px;
+    background: linear-gradient(45deg, rgb(73, 107, 254) 50%, rgb(84, 116, 253) 50%);
+    border: none;
+    @include font($font-primary, $fsize-text, $weight-regular, $color-basic, $uppercase);
+    text-align: center;
+    transition: all 1s ease-in-out;
+    
+
+    &:hover,
+    &:active,
+    &:focus {
+        cursor: pointer;
+        background: linear-gradient(-45deg, rgb(73, 107, 254) 50%, rgb(84, 116, 253) 50%);
+    }
+
+    &--input {
+        min-width: 150px;
+        max-height: 56px;
+        padding-top: 15px;
+        background: $color-primary;
+        outline: 2px solid white;
+   
+        &::after {
+            content: '\f002';
+            font-family: 'FontAwesome';
+            font-size: $fsize-title;
+            margin-left: 15px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: $color-secondary;
+            outline: 2px solid white;
+        }
+
+        @include phablet {
+            max-width: 110px;
+        }
+    }
+}
