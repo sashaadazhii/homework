@@ -1,0 +1,25 @@
+.toggler {
+    display: none;
+    position: absolute;
+    right: 15px;
+    width: 42px;
+    height: 42px;
+
+    .fas {
+        font-size: 42px;
+        color: $color-basic;
+    }
+
+    @include tablet  {
+        display: block;
+
+        &:hover + .menu,
+        &:active + .menu {
+            flex-direction: column;
+            width: 100%;
+            height: 200px;
+            border-radius: 9px;
+            background-color: $color-basic;
+        }
+    }
+}

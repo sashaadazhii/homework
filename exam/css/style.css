@@ -55,6 +55,26 @@ ul {
       .btn--input {
         max-width: 110px; } }
 
+.toggler {
+  display: none;
+  position: absolute;
+  right: 15px;
+  width: 42px;
+  height: 42px; }
+  .toggler .fas {
+    font-size: 42px;
+    color: #fff; }
+  @media only screen and (max-width: 768px) {
+    .toggler {
+      display: block; }
+      .toggler:hover + .menu,
+      .toggler:active + .menu {
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        border-radius: 9px;
+        background-color: #fff; } }
+
 /*logo*/
 .logo__link {
   font-family: "Josefin Sans", sans-serif;
@@ -167,6 +187,9 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media only screen and (max-width: 768px) {
+      .header-menu .nav .logo {
+        display: none; } }
     .header-menu .nav .menu {
       display: flex; }
       .header-menu .nav .menu__item {
@@ -183,10 +206,7 @@ ul {
           color: #232323; }
       @media only screen and (max-width: 768px) {
         .header-menu .nav .menu {
-          position: absolute;
-          top: 30px;
           height: 0;
-          transform: translateY(-100%);
           background-color: #fff;
           color: #333;
           overflow: hidden;
@@ -203,27 +223,6 @@ ul {
           height: 200px;
           border-radius: 9px;
           text-align: center; } }
-
-.toggler {
-  display: none;
-  position: absolute;
-  right: 15px;
-  width: 42px;
-  height: 42px; }
-  .toggler .fas {
-    font-size: 42px;
-    color: #fff; }
-  @media only screen and (max-width: 768px) {
-    .toggler {
-      display: block; }
-      .toggler:hover + .menu,
-      .toggler:active + .menu {
-        flex-direction: column;
-        width: 100%;
-        height: 200px;
-        border-radius: 9px;
-        transform: translateY(-100%);
-        background-color: #fff; } }
 
 /*end  of header*/
 /*main*/
@@ -293,6 +292,9 @@ ul {
     transform: translate(70%, -150%);
     content: '';
     background: url(../assets/img/dot.png) 50% no-repeat; }
+    @media only screen and (max-width: 768px) {
+      .list-icon::before {
+        display: none; } }
   .list-icon::after {
     position: absolute;
     right: 0;
@@ -301,6 +303,9 @@ ul {
     transform: translate(-70%, -150%);
     content: '';
     background: url(../assets/img/dot.png) 50% no-repeat; }
+    @media only screen and (max-width: 768px) {
+      .list-icon::after {
+        display: none; } }
 
 .content {
   min-height: 700px;

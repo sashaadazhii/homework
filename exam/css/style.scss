@@ -2,6 +2,7 @@
 @import "mixin";
 @import "layout";
 @import "btn";
+@import "toggle";
 
 
 /*logo*/
@@ -118,7 +119,6 @@
     top: 0;
     bottom: 0;
     padding: 30px 0;
-    // transform: translateY(-100%);
     background-color: $color-primary;
     z-index: 2;
 
@@ -127,6 +127,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .logo {
+            @include tablet {
+                display: none;
+            }
+        }
     
         .menu {
             display: flex;
@@ -146,10 +152,7 @@
             }
 
             @include tablet {
-                position: absolute;
-                top: 30px;
                 height: 0;
-                transform: translateY(-100%);
                 background-color: $color-basic;
                 color: $color-bgr;
                 overflow: hidden;
@@ -176,34 +179,6 @@
                    text-align: center;
                }
            }
-        }
-    }
-}
-
-.toggler {
-    display: none;
-    position: absolute;
-    right: 15px;
-    width: 42px;
-    height: 42px;
-
-    .fas {
-        font-size: 42px;
-        color: $color-basic;
-    }
-
-    @include tablet  {
-        display: block;
-
-        &:hover + .menu,
-        &:active + .menu {
-            // position: absolute;
-            flex-direction: column;
-            width: 100%;
-            height: 200px;
-            border-radius: 9px;
-            transform: translateY(-100%);
-            background-color: $color-basic;
         }
     }
 }
@@ -266,9 +241,6 @@
 }
 
 .icon-svg {
- 
-    // max-width: 62px;
-    // max-height: 62px;
     width: 100%;
     height: 100%;
 }
@@ -300,8 +272,7 @@
         background: url(../assets/img/dot.png) 50% no-repeat;
 
         @include tablet {
-            width: 0;
-            height: 0;
+            display: none;
         }
     }
 
@@ -315,8 +286,7 @@
         background: url(../assets/img/dot.png) 50% no-repeat;
 
         @include tablet {
-            width: 0;
-            height: 0;
+           display: none;
         }
     }
 }
