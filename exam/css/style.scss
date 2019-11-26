@@ -7,7 +7,6 @@
 
 /*logo*/
 .logo {
-
     &__link {
         @include font($font-secondary, $fsize-title, $weight-bold, $color-basic, $uppercase);
     
@@ -35,7 +34,7 @@
 }
 /*end of logo*/
 
-/*title*/
+
 .title {
     padding-bottom: 45px;
     @include font($font-primary, $fsize-title-large, $weight-regular, $color-basic, $capitalize);
@@ -45,8 +44,6 @@
         font-weight: $weight-bold;
     }
 }
-/*end of title*/
-
 
 /*header*/
 .header {
@@ -180,6 +177,7 @@
                }
            }
         }
+
         @import "toggle";
     }
 }
