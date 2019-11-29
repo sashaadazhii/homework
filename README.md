@@ -82,5 +82,8 @@ team-3-esculap
 exam Travel blog
 [exam](https://sashaadazhii.github.io/homework/exam/index.html)
 
-10 tasks JS
+10 tasks JS-1
 [js-01](https://sashaadazhii.github.io/homework/js-01/index.html)
+
+6 tasks JS-2
+[js-01](https://sashaadazhii.github.io/homework/js-02/index.html)
