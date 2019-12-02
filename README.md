@@ -86,4 +86,7 @@ exam Travel blog
 [js-01](https://sashaadazhii.github.io/homework/js-01/index.html)
 
 6 tasks JS-2
-[js-01](https://sashaadazhii.github.io/homework/js-02/index.html)
+[js-02](https://sashaadazhii.github.io/homework/js-02/index.html)
+
+Do While For JS-2
+[js-03](https://sashaadazhii.github.io/homework/js-03/index.html)
