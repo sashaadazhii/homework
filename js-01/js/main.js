@@ -55,11 +55,11 @@ alert(change);
 
 let number = prompt('enter number from 100 to 999');   //574
 
-let numberFirst = number % 10;// alert(numberFirst); //alert('first  ' + numberFirst) //4
+let numberFirst = number % 10;//4
 let numberFirst1 = Math.floor(number / 10);; //57
 
-let numberSecond = numberFirst1 % 10; //alert('second ' + numberSecond); //7 
-let numberThird = Math.floor(numberFirst1 / 10); //alert('third ' + numberThird); //5
+let numberSecond = numberFirst1 % 10;  //7 
+let numberThird = Math.floor(numberFirst1 / 10);//5
 
 let reverse = numberFirst * 100 + numberSecond * 10 + numberThird; console.log(reverse);
 
