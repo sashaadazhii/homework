@@ -1,15 +1,17 @@
-let circle = Number(prompt('Веевдіть окружність кола'));
-let square = Number(prompt('Веевдіть периметр квадрата'));
+const discountS = 0.97;
+const discountM = 0.95;
+const discountL = 0.97;
 
-const pi = 3.14;
-let d = circle / pi;
-let squareSide = square / 4;
+let summ = Number(prompt('Яка сума покупки?'));
+let result;
 
-let diagSq = Math.sqrt(Math.pow(squareSide, 2) * 2); //корінь з сума кв.катетів
-
-if (diagSq <= d) {
-    alert('влазить');
+if (summ >= 200 && summ <= 300) {
+    result = summ * discountS;
+} else if (summ > 300 && summ <= 500) {
+    result = summ * discountM;
+} else if (summ > 500) {
+    result = summ * discountL;;
 } else {
-    alert('не влазить');
+    result = summ;
 }
-
+alert(result);
