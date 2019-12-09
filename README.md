@@ -92,4 +92,7 @@ Do While For JS-3
 [js-03](https://sashaadazhii.github.io/homework/js-03/index.html)
 
 Functions JS-4
-[js-03](https://sashaadazhii.github.io/homework/js-04/index.html)
+[js-04](https://sashaadazhii.github.io/homework/js-04/index.html)
+
+Functions JS-5
+[js-05](https://sashaadazhii.github.io/homework/js-05/index.html)
