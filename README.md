@@ -99,3 +99,4 @@ Functions JS-5
 
 Array JS-6
 [js-06](https://sashaadazhii.github.io/homework/js-06-array/index.html)
+
