@@ -100,3 +100,7 @@ Functions JS-5
 Array JS-6
 [js-06](https://sashaadazhii.github.io/homework/js-06-array/index.html)
 
+DOM JS-8
+[js-08](https://sashaadazhii.github.io/homework/js-08-dom/index.html)
+
+
