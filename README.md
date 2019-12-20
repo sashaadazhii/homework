@@ -94,7 +94,7 @@ Do While For JS-3
 Functions JS-4
 [js-04](https://sashaadazhii.github.io/homework/js-04/index.html)
 
-Functions JS-5
+Objects JS-5
 [js-05](https://sashaadazhii.github.io/homework/js-05/index.html)
 
 Array JS-6
@@ -102,5 +102,8 @@ Array JS-6
 
 DOM JS-8
 [js-08](https://sashaadazhii.github.io/homework/js-08-dom/index.html)
+
+Events JS-9
+[js-09-3](https://sashaadazhii.github.io/homework/js-09-events/index.html)
 
 
