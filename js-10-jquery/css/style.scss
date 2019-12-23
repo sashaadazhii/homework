@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+$color-bgr: #292d3e;
+$color-nav: #13e28d;
+$color-item: #212534;
+$color-rate: #ffdd3f;
+$color-text: #aaadbb;
+$color-basic :#fff;
+
+$font:'Lato', sans-serif;
+$font-weight: 400;
+$font-weight-bold: 600;
+$font-size-s: 11px;
+$font-size-m: 12px;
+$font-size-l: 25px;
+
+$uppercase: uppercase;
+$capitalize: capitalize;
+
+@mixin font($font, $size, $weight, $color, $transform) { 
+    font-family: $font;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;   
+    text-transform: $transform;
+}
+
+.wrapper {
+    max-width: 1005px;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color:$color-bgr;
+    background-image: url(../assets/img/bgr.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tabs {
+    min-width: 600px;
+    min-height: 540px;
+    background-color: $color-item;
+    box-shadow: 0px 23px 57px 0px rgba(0, 0, 0, 0.4);
+
+    &__name {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 115px;
+        background-color: #2b3040;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 18px;
+        @include font($font, $font-size-m, $font-weight, $color-text, $uppercase);
+    }
+
+    .active {
+        height: 100%;
+        color: $color-basic;
+        border-bottom: 2px solid #fff;
+    }
+
+    &__title {
+        padding-top: 12px;
+    }
+}
+
+.svg-container {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.tab-container {
+    display: flex;
+    padding: 60px 40px;
+}
+
+.tab-img {
+   max-width: 160px;
+
+   &__img {
+       width: 100%;
+   }
+}
+
+.rate {
+    padding: 25px 0;
+    text-align: center;
+
+    .fas {
+        padding: 0 4px;
+        color: $color-rate;
+    }
+    .rate__clear {
+        color: #4b536b;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $color-nav;
+        }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+       
+        cursor: pointer;
+        color: $color-rate;
+    }
+}
+
+.price-container {
+    display: flex;
+}
+
+.tab-desc {
+    padding-left: 40px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__title {
+       // padding: 12px 0;
+        // @include font($font, $font-size-l, $font-weight, $color-basic, $capitalize);
+    }
+
+    &__name {
+        @include font($font, $font-size-l, $font-weight, $color-basic, $capitalize);
+    }
+
+    &__subtitle {
+        padding-top: 10px;
+        @include font($font, $font-size-m, $font-weight, $color-basic, $capitalize);
+    }
+
+    &__subs {
+        max-width: 305px;
+        padding: 40px 0;
+        @include font($font, $font-size-m, $font-weight, $color-text, none);
+        line-height: 19px;
+    }
+}
+
+.rate-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    border: 5px solid $color-nav;
+    @include font($font, $font-size-m, $font-weight, $color-text, $capitalize);
+}
+
+.btn {
+    min-width: 165px;
+    padding: 21px;
+    background: $color-nav;
+    border: none;
+    border-radius:2px;
+    @include font($font, $font-size-m, $font-weight-bold, $color-basic, $uppercase);
+    text-align: center;
+    transition: background 0.4s ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+        cursor: pointer;
+        background: $color-rate;
+    }
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+}
+.price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__discount {
+        @include font($font, $font-size-s, $font-weight, $color-rate, $uppercase);
+    }
+
+    &__info {
+        @include font($font, $font-size-l, $font-weight, $color-basic, $uppercase);
+    
+        .currency {
+            font-size: 28px;
+        }
+    }
+}
+
+
+/*calc*/
+
+.calc-item {
+    width:25px;
+    height: 25px;
+}
+
+.result {
+    width:87px;
+    height: 25px;
+    float: left;
+    border: 1px solid gray;
+}

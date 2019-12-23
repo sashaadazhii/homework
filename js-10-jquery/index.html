@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/41c7df2727.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <title>Tabs</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="tabs">
+                <ul class="tabs__name">
+                    <li class="tabs__item active">
+                        <div class="svg-container">
+                            <svg class="icon-svg">
+                                <use xlink:href="./assets/img/sprite.svg#info-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="tabs__title">information</div>
+
+                    </li>
+                    <li class="tabs__item">
+                        <div class="svg-container">
+                            <svg class="icon-svg">
+                                <use xlink:href="./assets/img/sprite.svg#card-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="tabs__title">ratings info</div>
+                    </li>
+                    <li class="tabs__item">
+                        <div class="svg-container">
+                            <svg class="icon-svg">
+                                <use xlink:href="./assets/img/sprite.svg#basket-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="tabs__title">where to buy</div>
+                    </li>
+                </ul>
+
+                <div class="tabs__inner tab-container">
+                    <div class="tab-img">
+                        <div class="tab-img__img">
+                            <img src="./assets/img/item.jpg" alt="farcry">
+                        </div>
+
+                        <div class="rate">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star rate__clear"></i>
+                        </div>
+                    </div>
+
+                    <div class="tab-desc">
+                        <div class="tab-desc__header">
+                            <div class="tab-desc__title">
+                                <h1 class="tab-desc__name">FarCry 4</h1>
+                                <div class="tab-desc__subtitle">First Released Nov 17, 2014</div>
+                            </div>
+                            <div class="rate-number">7.8</div>
+                        </div>
+
+                        <div class="tab-desc__subs">In Far Cry 4, players find themselves in Kyrat, a breathtaking,
+                            perilous and wild region of the Hima
+                            layas struggling under the regime of a despotic self-appointed king.</div>
+
+                        <div class="price-container">
+                            <div class="price">
+                                <div class="price__discount">20% off!</div>
+                                <div class="price__info"><span class="currency">$</span>59.96</div>
+                            </div>
+
+                            <div class="btn-container">
+                                <button class="btn">buy it now</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tabs__inner tab-container">
+                    <div class="rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star rate__clear"></i>
+                    </div>
+                    <div class="rate-number">7.8</div>
+                </div>
+                <div class="tabs__inner tab-container">
+                    <div class="price-container">
+                        <div class="price">
+                            <div class="price__discount">20% off!</div>
+                            <div class="price__info"><span class="currency">$</span>59.96</div>
+                        </div>
+
+                        <div class="btn-container">
+                            <button class="btn">buy it now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="calc-container">
+            <div class="str">
+                <button class="calc-item" value="C">C</button>
+                <button class="calc-item" value="/">/</button>
+                <button class="calc-item" value="*">*</button>
+                <button class="calc-item" value="0">0</button>
+            </div>
+            <div class="str">
+                <button class="calc-item" value="7">7</button>
+                <button class="calc-item" value="8">8</button>
+                <button class="calc-item" value="9">9</button>
+                <button class="calc-item" value="-">-</button>
+            </div>
+            <div class="str">
+                <button class="calc-item" value="4">4</button>
+                <button class="calc-item" value="5">5</button>
+                <button class="calc-item" value="6">6</button>
+                <button class="calc-item" value="+">+</button>
+            </div>
+            <div class="str">
+                <button class="calc-item" value="1">1</button>
+                <button class="calc-item" value="2">2</button>
+                <button class="calc-item" value="3">3</button>
+                <button class="calc-item" value=".">.</button>
+            </div>
+            <div class="str">
+                <button class="calc-item" value="=" name="result">=</button>
+                <div class="dusplay-result"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="./js/js1.js"></script>
+    <script src="./js/js2.js"></script>
+</body>
+
+</html>
