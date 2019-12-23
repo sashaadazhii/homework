@@ -106,4 +106,7 @@ DOM JS-8
 Events JS-9
 [js-09-3](https://sashaadazhii.github.io/homework/js-09-events/index.html)
 
+Events JS-jQuery
+[js-10](https://sashaadazhii.github.io/homework/js-10-jquery/index.html)
+
 
