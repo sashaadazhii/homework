@@ -109,4 +109,10 @@ Events JS-9
 Events JS-jQuery
 [js-10](https://sashaadazhii.github.io/homework/js-10-jquery/index.html)
 
+Events JS-Slider
+[js-11](https://sashaadazhii.github.io/homework/js-11-slide/index.html)
+
+Events JS-Exam
+[js-exam](https://sashaadazhii.github.io/homework/exam2/index.html)
+
 
