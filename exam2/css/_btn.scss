@@ -1,0 +1,21 @@
+.btn-container {
+    margin: 30px 0;
+
+    .btn {
+        min-width: 190px;
+        padding: 20px 40px;
+        border: 1px solid $color-primary;
+        background-color: transparent;
+        @include font($font-primary, $fsize-primary, $weight-regular, $color-primary, $uppercase);
+        text-align: center;
+        transition: all 0.4s ease-in-out;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            outline: none;
+            background-color: $color-secondary;
+            color: $color-basic;
+        }
+    }
+}
