@@ -56,7 +56,6 @@
     
     @include tablet {
         flex-direction: column;
-        // height: 100vh;
     }
 }
 
@@ -97,7 +96,6 @@
         background: $color-basic;
     }
 
-    
     @include tablet {
         flex-direction: column;
         justify-content: space-around;
@@ -105,6 +103,7 @@
 
         .menu__item {
             padding: 15px 0;
+            z-index: 50;
         }
     }
 }
@@ -238,7 +237,6 @@
     &__link:before {
         position: absolute;
         transform: translate(-50%, -50%);
-        // padding-right: 20px;
         display: none;
         content: attr(data-tooltip);
         @include font($font-primary, $fsize-primary, $weight-regular, $color-primary, $uppercase);
@@ -255,15 +253,13 @@
 
 /*title*/
 .title {
-    position: relative;;
+    position: relative;
     padding: 80px 0 40px;
     @include font($font-secondary, $fsize-title, $weight-regular, $color-primary, $uppercase);
     text-align: center;
-    // line-height: 22px;
 
     &::before {
         position: absolute;
-        /* text-align: center; */
         left: 50%;
         transform: translateX(-50%);
         content: '';
@@ -305,7 +301,6 @@
 
         @include phablet {
             width: 100%;
-            // height: auto;
             margin: 0 auto;
             float: none;
         }
@@ -321,26 +316,10 @@
         @include phablet {
             box-shadow: unset;
         }
-
-        // &:before {
-        //     content: '';
-        //     position: absolute;
-        //     width: calc(2/4*100vw); //calc((2/4*100vw) - 260px);
-        //     max-width: 585px;
-        //     height: 470px;
-        //     transform: translate(-260px, -65px);
-        //     background-color: $color-bgr1;
-        //     z-index: -10;
-
-        //     @include phablet {
-        //         width: 0;
-        //         height: 0;
-        //     }
-        // }
     }
 
     &__info {
-        padding: 70px 0 ;
+        padding: 70px 0;
     }
 
     &__subtitle {
@@ -382,27 +361,10 @@
         @include phablet {
             box-shadow: unset;
         }
-
-        // &:before {
-        //     content: '';
-        //     position: absolute;
-        //     width: calc((2/4*100vw) - 260px);
-        //     max-width: 585px;
-        //     height: 470px;
-        //     transform: translate(260px, -65px);
-        //     background-color: $color-bgr2;
-        //     z-index: -10;
-
-        //     @include phablet {
-        //         width: 0;
-        //         height: 0;
-        //     }
-        // }
     }
 }
 
 /*carousel*/
-
 .carousel {
 
     &__item-container {
@@ -493,6 +455,7 @@
     border-radius: 50%;
     background-color: transparent;
 }
+
 .slider-btn--next {
     right: 60px;
 }
@@ -547,11 +510,7 @@
     }
 }
 
-// .map {
-//     height: 700px;
-//     background-color: $color-secondary;  //DELETE
-
-// }
+/*map*/
 .map__marker {
     position: absolute;
     left: 50px;
@@ -562,10 +521,13 @@
     box-shadow: inset 0px 0px 0px 15px rgb(255,255,255), 0px 0px 0px 18px rgba(255,255,255,0.5);
     z-index: 99;
 }
+
 #map {
     width: 100%;
     height: 700px;
 }
+
+/*form*/
 
 .form-block {
     position: absolute;
@@ -693,7 +655,6 @@
     }
 }
 
-
 .footer-block {
     position: relative;
     min-height: 525px;
@@ -706,18 +667,3 @@
 header, main, footer {
     overflow: hidden;
 }
-
-// .logo {
-//     width: 25%;
-
-//     &__link {
-//         width: 100%;
-
-//         img {
-//         width:100%;
-//         }
-//     }
-// }
-
-
-

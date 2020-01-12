@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./js/slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="./js/slick/slick.css" />
+
     <title>Monticello</title>
 </head>
 
@@ -446,13 +447,39 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script src="./js/main.js"></script>
+
     <script src="./js/slick/slick.min.js"></script>
 
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGxQ2U5YQQnaZdlYn-gnYWzD4vThX7doI&callback=initMap">
         </script>
+
     <script>
-        $(document).ready(function () {  // main slider
+
+        function initMap() {
+
+            // The location of Uluru
+            var uluru = { lat: 40.66, lng: -73.955 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 16, center: uluru });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({
+                position: { lat: 40.66, lng: -73.955 },
+                map: map,
+                title: '11111111',
+                icon: {
+                    url: "./assets/img/marker.png",
+                    scaledSize: new google.maps.Size(106, 106)
+                }
+            });
+        }</script>
+
+    <!-- 
+<script>
+          $(document).ready(function () {  // main slider
             $('.slider').slick({
                 lazyLoad: 'ondemand',
                 slidesToShow: 1,
@@ -561,7 +588,7 @@
             });
         }
 
-    </script>
+    </script> -->
 </body>
 
 </html>
