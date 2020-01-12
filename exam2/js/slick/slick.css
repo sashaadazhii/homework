@@ -81,11 +81,11 @@
 
     height: 100%;
     min-height: 1px;
-    padding: 0 15px; /*custom*/
+   /* margin: 0 15px; /*custom*/
 }
-.slick-cloned .carousel__content {  /*custom NOT WORKING*/
-    padding: 30px 20px;
-}
+ /* .slick-cloned .carousel__content {  custom NOT WORKING
+    padding: 30px 20px; 
+}  */
 
 [dir='rtl'] .slick-slide
 {

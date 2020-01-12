@@ -30,6 +30,20 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50%;
+
+        .container {
+            height: 100%;
+        }
+    }
+
+    .slider-container {
+        // display: flex;
+        // align-items: center;
+        height: calc(100% - 205px);
+
+        // @include mobile {
+        //     display: none;
+        // }
     }
 }
 
@@ -37,9 +51,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // height: 160px;
-    padding-top: 60px;
-
+    height: 160px;
+    // padding-top: 60px;
     
     @include tablet {
         flex-direction: column;
@@ -137,9 +150,12 @@
     justify-content: center;
     align-items: center;
     padding-top: 50px;
-    // min-height: 500px;
-    overflow: hidden;
     text-align: center;
+    width: 100%;
+
+    @include tablet {
+        padding-top: 150px;
+    }
 
     &__title {
         padding: 40px 0;
@@ -147,17 +163,22 @@
    
         @include tablet {
             padding: 20px 0;
-            font-size: $fsize-title;
+            font-size: 30px;
+        }
+
+        @include mobile{
+            font-size: $fsize-subtitle;
         }
     }
 
     &__subtitle {
         @include font($font-primary, $fsize-secondary, $weight-regular, $color-basic, $uppercase);
         letter-spacing: 8px;
-    }
 
-    @include tablet {
-       
+        @include mobile{
+            font-size: $fsize-secondary;
+            letter-spacing: 4px;
+        }
     }
 }
 
@@ -179,9 +200,6 @@
         &:hover {
             cursor: pointer;
         }
-    }
-    @include tablet {
-        display: none;
     }
 }
 
@@ -387,6 +405,10 @@
 
 .carousel {
 
+    &__item-container {
+        margin: 0 15px;
+    }
+
     &__item {
         display: flex;
         flex-direction: column; 
@@ -422,8 +444,10 @@
     }
 
     &__prev {
+        max-height: 100px;
         padding: 25px 0;
         @include font($font-text, $fsize-secondary, $weight-regular, $color-secondary, none);
+        overflow: hidden;
     }
 
     &__pic {
@@ -496,6 +520,8 @@
 
     &__img {
         width: 100%;
+        height: 100%;
+        padding: 0 5px 10px 5px;
     }
 
     &__icon {
@@ -514,7 +540,7 @@
 .gallery-inner__item-container {
     max-width: 50%;
     max-height: 50%;
-    padding: 0 0 10px 10px;
+    
 
     .gallery-inner__item {
         width: 100%;
@@ -634,6 +660,11 @@
     display: flex;
     justify-content: space-between;
     padding-top: 50px;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .footer-content {
@@ -654,6 +685,10 @@
         .copyright:after {
             content: '|';
             padding: 0 20px;
+
+            @include mobile {
+                content: '';
+            }
         }
     }
 }
@@ -672,7 +707,17 @@ header, main, footer {
     overflow: hidden;
 }
 
+// .logo {
+//     width: 25%;
 
+//     &__link {
+//         width: 100%;
+
+//         img {
+//         width:100%;
+//         }
+//     }
+// }
 
 
 

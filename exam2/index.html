@@ -13,16 +13,18 @@
 </head>
 
 <body>
+
     <header class="header">
+        <ul class="dots">
+            <li class="dots__item dots__item--active"><a href="#" class="dots__link" data-tooltip="about us"></a>
+            </li>
+            <li class="dots__item"><a href="#projects" class="dots__link" data-tooltip="projects"></a></li>
+            <li class="dots__item"><a href="#news" class="dots__link" data-tooltip="news"></a></li>
+            <li class="dots__item"><a href="#gallery" class="dots__link" data-tooltip="gallery"></a></li>
+            <li class="dots__item"><a href="#contacts" class="dots__link" data-tooltip="contacts"></a></li>
+        </ul>
         <section class="header__slider">
-            <ul class="dots">
-                <li class="dots__item dots__item--active"><a href="#" class="dots__link" data-tooltip="about us"></a>
-                </li>
-                <li class="dots__item"><a href="#projects" class="dots__link" data-tooltip="projects"></a></li>
-                <li class="dots__item"><a href="#news" class="dots__link" data-tooltip="news"></a></li>
-                <li class="dots__item"><a href="#gallery" class="dots__link" data-tooltip="gallery"></a></li>
-                <li class="dots__item"><a href="#contacts" class="dots__link" data-tooltip="contacts"></a></li>
-            </ul>
+
             <div class="container">
                 <div class="header-menu">
                     <div class="logo">
@@ -78,32 +80,34 @@
                 </div>
 
                 <div class="slider-container">
-                    <div class="main-slogan-container">
-                        <div class="main-slogan">
-                            <div class="main-slogan__title">Simple & mordern</div>
-                            <div class="main-slogan__subtitle">We make the world's beautiful every day</div>
+                    <div class="slider">
+                        <div class="main-slogan-container">
+                            <div class="main-slogan">
+                                <div class="main-slogan__title">Simple & mordern</div>
+                                <div class="main-slogan__subtitle">We make the world's beautiful every day</div>
+                            </div>
+                        </div>
+                        <div class="main-slogan-container">
+                            <div class="main-slogan">
+                                <div class="main-slogan__title">new & perfect</div>
+                                <div class="main-slogan__subtitle">We create future</div>
+                            </div>
+                        </div>
+                        <div class="main-slogan-container">
+                            <div class="main-slogan">
+                                <div class="main-slogan__title">technology & experience</div>
+                                <div class="main-slogan__subtitle">We make it simple and powerful</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="main-slogan-container">
-                        <div class="main-slogan">
-                            <div class="main-slogan__title">new & perfect</div>
-                            <div class="main-slogan__subtitle">We create future</div>
-                        </div>
-                    </div>
-                    <div class="main-slogan-container">
-                        <div class="main-slogan">
-                            <div class="main-slogan__title">technology & experience</div>
-                            <div class="main-slogan__subtitle">We make it simple and powerful</div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="scroll-container">
-                    <a class="scroll" href="#projects">
-                        <svg class="icon-svg">
-                            <use xlink:href="./assets/img/sprite.svg#arrow-down"></use>
-                        </svg>
-                    </a>
+                    <div class="scroll-container">
+                        <a class="scroll" href="#projects">
+                            <svg class="icon-svg">
+                                <use xlink:href="./assets/img/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -126,7 +130,7 @@
                             <div class="block__desc">Increasing prosperity in our lives can be accomplished by having
                                 the right frame of mind. The truth is, our thoughts are very powerful.</div>
                             <div class="btn-container">
-                                <butoon class="btn">more details</butoon>
+                                <button class="btn">more details</button>
                             </div>
                             <div class="block__location-info">
                                 <svg class="icon-svg">
@@ -148,7 +152,7 @@
                                 at the big ‘R’ of recognition and how a digital advertising network may help.</div>
 
                             <div class="btn-container">
-                                <butoon class="btn">more details</butoon>
+                                <button class="btn">more details</button>
                             </div>
                             <div class="block__location-info">
                                 <svg class="icon-svg">
@@ -303,9 +307,9 @@
                 </div>
                 <ul class="gallery">
                     <li class="gallery__item">
-                        <iframe height="440px" width="100%" allowfullscreen="true" src="./assets/img/360.jpg"
-                            class="gallery__img"></iframe>
-                        <!-- <img src="./assets/img/360.jpg" class="gallery__img" alt="gallery photo"> -->
+                        <!-- <iframe height="440px" width="100%" allowfullscreen="true" src="./assets/img/360.jpg"
+                            class="gallery__img"></iframe> -->
+                        <img src="./assets/img/gal1.jpg" class="gallery__img" alt="gallery photo">
                         <img src="./assets/img/360.png" alt="360" class="gallery__icon">
                     </li>
                     <li class="gallery__item">
@@ -335,7 +339,7 @@
                 </ul>
 
                 <div class="btn-container">
-                    <butoon class="btn">see more</butoon>
+                    <button class="btn">see more</button>
                 </div>
             </div>
         </section>
@@ -449,11 +453,19 @@
         </script>
     <script>
         $(document).ready(function () {  // main slider
-            $('.slider-container').slick({
+            $('.slider').slick({
                 lazyLoad: 'ondemand',
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: false,
+                responsive: [
+                    {
+                        breakpoint: 980,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    },]
             });
 
             //slider news
@@ -462,6 +474,7 @@
                 slidesToScroll: 1,
                 // autoplay: true,
                 // autoplaySpeed: 2000,
+
                 dots: true,
                 nextArrow: $('.slider-btn--next'),
                 prevArrow: $('.slider-btn--prev'),
@@ -527,9 +540,6 @@
                     });
                 });
             }
-
-            //map
-
         });
 
         function initMap() {
