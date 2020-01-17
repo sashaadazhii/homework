@@ -106,13 +106,16 @@ DOM JS-8
 Events JS-9
 [js-09-3](https://sashaadazhii.github.io/homework/js-09-events/index.html)
 
-Events JS-jQuery
+JS-jQuery
 [js-10](https://sashaadazhii.github.io/homework/js-10-jquery/index.html)
 
-Events JS-Slider
+JS-Slider
 [js-11](https://sashaadazhii.github.io/homework/js-11-slide/index.html)
 
-Events JS-Exam
+JS-Exam
 [js-exam](https://sashaadazhii.github.io/homework/exam2/index.html)
+
+Grid
+[grid-01](https://sashaadazhii.github.io/homework/grid/homework-01/index.html)
 
 
