@@ -40,9 +40,6 @@
     }
 
     .slider-container {
-        // display: flex;
-        // align-items: center;
-        // height: calc(100% - 205px);
         flex-grow: 1;
 
         .slider {
@@ -50,10 +47,6 @@
             display: flex;
             align-items: center;
         }
-
-        // @include mobile {
-        //     display: none;
-        // }
     }
 }
 
@@ -62,7 +55,6 @@
     justify-content: space-between;
     align-items: center;
     height: 160px;
-    // padding-top: 60px;
     
     @include tablet {
         flex-direction: column;
@@ -154,18 +146,9 @@
 }
 
 .main-slogan {
-    // display: flex;
-    // flex-flow: column nowrap;
-    // justify-content: center;
-    // align-items: center;
-    // padding-top: 50px;
-    text-align: center;
     width: 100%;
-
-    // @include tablet {
-    //     padding-top: 150px;
-    // }
-
+    text-align: center;
+    
     &__title {
         padding: 40px 0;
         @include font($font-secondary, 80px, $weight-regular, $color-basic, $uppercase);
@@ -256,8 +239,8 @@
         display: inline-block;
     }
 
-    @include tablet {
-        // display: none;
+    @include mobile {
+        display: none;
     }
 }
 
@@ -308,11 +291,6 @@
         height: 470px;
         margin-right: 70px;
         float: left;
-
-        // width: 100%;
-        // height: 100%;
-        // background: url(../assets/img/proj1.jpg) 50% no-repeat;
-        // background-size: cover;
         box-shadow: -215px -70px 0px $color-bgr1;
 
         @include phablet {
@@ -326,9 +304,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        // // background: url(../assets/img/proj1.jpg) 50% no-repeat;
-        // // background-size: cover;
-        // box-shadow: -215px -70px 0px $color-bgr1;
 
         @include phablet {
             box-shadow: unset;
@@ -360,28 +335,17 @@
 }
 
 .block--left {
+
     .block__img {
         margin-right: 0;
         margin-left: 70px;
         float: right;
-
         box-shadow: 215px -70px 0px $color-bgr2;
 
         @include phablet {
             box-shadow: unset;
-
-        @include phablet {
             margin: 0 auto;
             float: none;
-        }
-    }
-   
-    .block__picture {
-        // background: url(../assets/img/proj2.jpg) 50% no-repeat;
-        // box-shadow: 215px -70px 0px $color-bgr2;
-
-        // @include phablet {
-        //     box-shadow: unset;
         }
     }
 }
@@ -395,7 +359,7 @@
 
     &__item {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         background-color: $color-basic;
     }
 
@@ -456,7 +420,6 @@
 
 /*news*/
 .news {
-    // position: relative;
     padding: 0 0 100px;
     background: url(../assets/img/bgr_news.png), linear-gradient(to bottom left, $color-bgr1, #3c7fd4);
     background-size: cover;
