@@ -32,14 +32,24 @@
         background-position: 50%;
 
         .container {
+            display: flex;
+            flex-direction: column;
             height: 100%;
+            padding-top: 0;
         }
     }
 
     .slider-container {
         // display: flex;
         // align-items: center;
-        height: calc(100% - 205px);
+        // height: calc(100% - 205px);
+        flex-grow: 1;
+
+        .slider {
+            height: calc(100% - 160px);
+            display: flex;
+            align-items: center;
+        }
 
         // @include mobile {
         //     display: none;
@@ -144,17 +154,17 @@
 }
 
 .main-slogan {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
+    // display: flex;
+    // flex-flow: column nowrap;
+    // justify-content: center;
+    // align-items: center;
+    // padding-top: 50px;
     text-align: center;
     width: 100%;
 
-    @include tablet {
-        padding-top: 150px;
-    }
+    // @include tablet {
+    //     padding-top: 150px;
+    // }
 
     &__title {
         padding: 40px 0;
@@ -247,7 +257,7 @@
     }
 
     @include tablet {
-        display: none;
+        // display: none;
     }
 }
 
@@ -299,6 +309,12 @@
         margin-right: 70px;
         float: left;
 
+        // width: 100%;
+        // height: 100%;
+        // background: url(../assets/img/proj1.jpg) 50% no-repeat;
+        // background-size: cover;
+        box-shadow: -215px -70px 0px $color-bgr1;
+
         @include phablet {
             width: 100%;
             margin: 0 auto;
@@ -306,12 +322,13 @@
         }
     }
 
-    &__pic {
+    &__picture {
         width: 100%;
         height: 100%;
-        background: url(../assets/img/proj1.jpg) 50% no-repeat;
-        background-size: cover;
-        box-shadow: -215px -70px 0px $color-bgr1;
+        object-fit: cover;
+        // // background: url(../assets/img/proj1.jpg) 50% no-repeat;
+        // // background-size: cover;
+        // box-shadow: -215px -70px 0px $color-bgr1;
 
         @include phablet {
             box-shadow: unset;
@@ -319,7 +336,7 @@
     }
 
     &__info {
-        padding: 70px 0;
+        padding-top: 50px;
     }
 
     &__subtitle {
@@ -348,18 +365,23 @@
         margin-left: 70px;
         float: right;
 
+        box-shadow: 215px -70px 0px $color-bgr2;
+
+        @include phablet {
+            box-shadow: unset;
+
         @include phablet {
             margin: 0 auto;
             float: none;
         }
     }
    
-    .block__pic {
-        background: url(../assets/img/proj2.jpg) 50% no-repeat;
-        box-shadow: 215px -70px 0px $color-bgr2;
+    .block__picture {
+        // background: url(../assets/img/proj2.jpg) 50% no-repeat;
+        // box-shadow: 215px -70px 0px $color-bgr2;
 
-        @include phablet {
-            box-shadow: unset;
+        // @include phablet {
+        //     box-shadow: unset;
         }
     }
 }
@@ -434,17 +456,21 @@
 
 /*news*/
 .news {
-    position: relative;
-    padding: 100px 0;
+    // position: relative;
+    padding: 0 0 100px;
     background: url(../assets/img/bgr_news.png), linear-gradient(to bottom left, $color-bgr1, #3c7fd4);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
+
+    .container {
+        position: relative;
+    }
 }
 
 .slider-btn {
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     display: flex;
     justify-content: center;
@@ -454,14 +480,22 @@
     border: 1px solid rgba(255,255,255,0.5);
     border-radius: 50%;
     background-color: transparent;
+    transition: 0.3s linear;
+
+    &:hover,
+    &:active,
+    &:focus {
+        border: 2px solid $color-basic;
+        cursor: pointer;
+    }
 }
 
 .slider-btn--next {
-    right: 60px;
+    right: -60px;
 }
 
 .slider-btn--prev {
-    left: 60px;
+    left: -60px;
 }
 
 /*gallery*/
@@ -525,10 +559,13 @@
 #map {
     width: 100%;
     height: 700px;
+
+    .container {
+        padding-top: 0;
+    }
 }
 
 /*form*/
-
 .form-block {
     position: absolute;
     left: 50%;

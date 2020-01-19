@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./assets/img/marker.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./js/slick/slick-theme.css" />
@@ -124,7 +125,9 @@
                 <div class="block-container">
                     <div class="block">
                         <div class="block__img">
-                            <div class="block__pic"></div>
+                            <!-- <div class="block__pic"> -->
+                            <img src="./assets/img/proj1.jpg" class="block__picture" alt="project">
+                            <!-- </div> -->
                         </div>
                         <div class="block__info">
                             <div class="block__subtitle">one world</div>
@@ -145,7 +148,9 @@
                 <div class="block-container block-container--left">
                     <div class="block block--left">
                         <div class="block__img">
-                            <div class="block__pic"></div>
+                            <!-- <div class="block__pic"> -->
+                            <img src="./assets/img/proj2.jpg" class="block__picture" alt="project">
+                            <!-- </div> -->
                         </div>
                         <div class="block__info">
                             <div class="block__subtitle">International</div>
@@ -352,7 +357,6 @@
             <div class="container">
             </div>
         </section>
-        <!-- <div class="map__marker" id="map__marker"></div> -->
 
         <section class="form-block" id="contacts">
             <div class="container">
@@ -476,120 +480,8 @@
                     scaledSize: new google.maps.Size(106, 106)
                 }
             });
-        }</script>
-
-    <!-- 
-<script>
-          $(document).ready(function () {  // main slider
-            $('.slider').slick({
-                lazyLoad: 'ondemand',
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                responsive: [
-                    {
-                        breakpoint: 980,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                        }
-                    },]
-            });
-
-            //slider news
-            $('.carousel').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                // autoplay: true,
-                // autoplaySpeed: 2000,
-
-                dots: true,
-                nextArrow: $('.slider-btn--next'),
-                prevArrow: $('.slider-btn--prev'),
-                responsive: [
-                    {
-                        breakpoint: 900,
-                        settings: {
-                            arrows: false,
-                            centerPadding: '40px',
-                            slidesToShow: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            arrows: false,
-                            centerPadding: '40px',
-                            slidesToShow: 1,
-                        }
-                    }
-                ]
-            });
-
-
-            //anchor landing smooth
-            $('a[href^="#"]').on('click', function (event) {
-                var target = $(this.getAttribute('href'));
-                if (target.length) {
-                    event.preventDefault();
-                    $('html, body').stop().animate({
-                        scrollTop: target.offset().top
-                    }, 700);
-                }
-            });
-
-            //dots active class
-            var $dot = $('.dots__item');
-            $dot.click(function (event) {
-                $dot.removeClass('dots__item--active').eq($(this).index())
-                    .addClass('dots__item--active');
-            });
-
-            //mobile menu
-            var containerWidth = $("body").width();
-            $cross = $(".cross");
-            $menu = $(".menu");
-            $hamburger = $(".hamburger");
-
-            if (containerWidth <= 980) {
-                $cross.hide();
-                $menu.hide();
-                $hamburger.click(function () {
-                    $menu.slideToggle("slow", function () {
-                        $hamburger.hide();
-                        $cross.show();
-                    });
-                });
-
-                $cross.click(function () {
-                    $menu.slideToggle("slow", function () {
-                        $cross.hide();
-                        $hamburger.show();
-                    });
-                });
-            }
-        });
-
-        function initMap() {
-
-            // The location of Uluru
-            var uluru = { lat: 40.66, lng: -73.955 };
-            // The map, centered at Uluru
-            var map = new google.maps.Map(
-                document.getElementById('map'), { zoom: 16, center: uluru });
-            // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({
-                position: { lat: 40.66, lng: -73.955 },
-                map: map,
-                title: '11111111',
-                icon: {
-                    url: "./assets/img/marker.png",
-                    scaledSize: new google.maps.Size(106, 106)
-                }
-            });
         }
-
-    </script> -->
+    </script>
 </body>
 
 </html>
