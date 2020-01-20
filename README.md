@@ -118,4 +118,8 @@ JS-Exam
 Grid
 [grid-01](https://sashaadazhii.github.io/homework/grid/homework-01/index.html)
 
+Vue-01
+[vue-01](https://sashaadazhii.github.io/homework/vue-01/index.html)
 
+Chatbot
+[chatbot](https://sashaadazhii.github.io/homework/bot-project/index.html)
