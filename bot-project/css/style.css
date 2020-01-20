@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 15px; }
+
+.btn-container .btn {
+  min-width: 205px;
+  max-width: 255px;
+  padding: 18px 30px;
+  border: 2px solid #FDBD13;
+  background-color: transparent;
+  border-radius: 30px;
+  font-family: "days_one";
+  font-size: 20px;
+  color: #FDBD13;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 25px;
+  transition: all 0.3s linear; }
+  .btn-container .btn:hover, .btn-container .btn:focus {
+    cursor: pointer;
+    outline: none;
+    background: rgba(253, 189, 19, 0.15); }
+
+.btn-container--img {
+  position: absolute;
+  left: calc(100% - 517px); }
+
+@font-face {
+  font-family: 'sw_foxes';
+  src: local("sw_foxes_regular"), url("../assets/font/sw_foxes_regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'days_one';
+  src: local("days_one"), url("../assets/font/days_one.ttf") format("truetype"); }
+
+.header {
+  position: relative;
+  height: 100vh;
+  background: url(../assets/img/spiral_header.png), url(../assets/img/background1.jpg);
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%; }
+
+.header-section {
+  height: 100%; }
+  .header-section__left {
+    display: flex;
+    flex-direction: column; }
+    .header-section__left .header-slogan {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      height: 100%; }
+  .header-section__right {
+    display: flex;
+    justify-content: center;
+    max-width: 470px; }
+    .header-section__right .main-image {
+      position: absolute;
+      top: 60px;
+      right: 0; }
+
+.logo {
+  font-family: "Codystar", cursive;
+  font-size: 40px;
+  color: #FDBD13;
+  text-transform: uppercase; }
+
+.header-slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .header-slogan__title {
+    font-family: "sw_foxes", sans-serif;
+    font-size: 57px;
+    color: #FDBD13;
+    text-transform: uppercase;
+    line-height: 97px; }
+  .header-slogan__subtitle {
+    font-family: "days_one";
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    line-height: 36px; }

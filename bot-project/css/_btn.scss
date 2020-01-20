@@ -1,0 +1,29 @@
+.btn-container {
+
+    .btn {
+        min-width: 205px;
+        max-width: 255px;
+        padding: 18px 30px;
+        border: 2px solid $color-primary;
+        background-color: transparent;
+        border-radius: 30px;
+        @include font($font-primary, $fsize-modal, $color-primary, $uppercase);
+        text-align: center;
+        line-height: 25px;
+        transition: all 0.3s linear;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            outline: none;
+            background: rgba(253, 189, 19, 0.15);
+          
+        }
+    }
+}
+
+.btn-container--img {
+    position: absolute;
+    left: calc(100% - 517px);
+}
+

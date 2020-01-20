@@ -1,0 +1,78 @@
+@import 'variables';
+@import 'mixin';
+@import 'layouts';
+@import 'btn';
+@import 'toggle';
+
+@font-face {
+	font-family: 'sw_foxes';
+	src: local('sw_foxes_regular'), url('../assets/font/sw_foxes_regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'days_one';
+	src: local('days_one'), url('../assets/font/days_one.ttf') format('truetype');
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+    background: url(../assets/img/spiral_header.png), url(../assets/img/background1.jpg);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+}
+
+.header-section {
+    height: 100%;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+
+        .header-slogan {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: center;
+            height: 100%;
+        }
+    }
+ 
+    &__right {
+        display: flex;
+        justify-content: center;
+        max-width: 470px;
+
+        .main-image {
+            position: absolute;
+            top: 60px;
+            right: 0;
+        }
+    }
+}
+
+.logo {
+    @include font($font-logo, $fsize-logo, $color-primary, $uppercase);
+}
+
+.header-slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        @include font($font-title, 57px, $color-primary, $uppercase);
+        line-height: 97px;
+    }
+    &__subtitle {
+        @include font($font-primary, 28px, rgba(255, 255, 255, 0.7), $uppercase);
+        line-height: 36px;
+    }
+}
