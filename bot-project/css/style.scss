@@ -18,7 +18,7 @@
     position: relative;
     height: 100vh;
     background: url(../assets/img/spiral_header.png), url(../assets/img/background1.jpg);
-    background-size: contain, cover;
+    background-size:  cover;
     background-repeat: no-repeat;
     background-position: 50%;
 
@@ -26,6 +26,7 @@
         display: flex;
         justify-content: space-between;
         height: 100%;
+        padding: 0 15px;
     }
 }
 
@@ -70,9 +71,142 @@
     &__title {
         @include font($font-title, 57px, $color-primary, $uppercase);
         line-height: 97px;
+        font-weight: 400;
     }
     &__subtitle {
         @include font($font-primary, 28px, rgba(255, 255, 255, 0.7), $uppercase);
         line-height: 36px;
+    }
+}
+
+/*main*/
+.modal-section {
+    // position: relative;
+    height: 915px;
+    background: url(../assets/img/background2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    // &:after {
+    //     position: absolute;
+    //     bottom: 100px;
+    //     height: 100%;
+    //     width: 100%;
+    //     content: '';
+    //     background: url(../assets/img/background2-1.jpg);
+    //     background-size: cover;
+    // }
+}
+
+.navigation {
+    display: flex;
+
+    &__left {
+        width: 40%;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-flow: column wrap;
+    height: 400px;
+    justify-content: center;
+
+    &__item {
+        width: 190px;
+        height: 72px;
+        padding: 0 36px;
+        margin: 12px;
+        background-color: $color-nav;
+        border-radius: 25px;
+        line-height: 16px;
+        text-align: center;
+        transition: 0.3s linear;
+
+        &:hover,
+        &:focus,
+        &:active {
+            cursor: pointer;
+            background-color: $color-secondary;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        @include font($font-primary, $fsize-primary, rgba(255, 255, 255, 0.4), $uppercase);
+        transition: 0.3s linear;
+
+        &:hover,
+        &:focus,
+        &:active {
+            cursor: pointer;
+            color: $color-basic;
+        }
+    }
+}
+
+.preview-container {
+    
+    position: absolute;
+        right: 0;
+        min-width: 760px;
+}
+
+.preview {
+    // position: absolute;
+    // right: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 35px;
+    background-color: $color-secondary;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+    &__desc {
+        max-width: 230px;
+    }
+
+    &__text {
+        padding: 15px;
+        @include font($font-primary, $fsize-secondary, rgba(255, 255, 255, 0.85), none);
+        line-height: 24px;
+    }
+
+    &__image-container {
+        position: absolute;
+        bottom: 50px;
+        right: 30px;
+        height: 100%;
+    }
+
+    &__image {
+        position: relative;
+        width: 430px;
+        padding: 15px;
+    }
+
+    &__pic {
+        position: absolute;
+        transform: translate(25%, 25%);
+        z-index: 2;
+    }
+
+    &__animated {
+        position: absolute;
+    }
+
+    &__animation {
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        width: 330px;
+        height: 240px;
+        opacity: 0.4;
     }
 }

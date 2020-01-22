@@ -50,13 +50,14 @@ a {
   position: relative;
   height: 100vh;
   background: url(../assets/img/spiral_header.png), url(../assets/img/background1.jpg);
-  background-size: contain, cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%; }
   .header .container {
     display: flex;
     justify-content: space-between;
-    height: 100%; }
+    height: 100%;
+    padding: 0 15px; }
 
 .header-section {
   height: 100%; }
@@ -93,10 +94,102 @@ a {
     font-size: 57px;
     color: #FDBD13;
     text-transform: uppercase;
-    line-height: 97px; }
+    line-height: 97px;
+    font-weight: 400; }
   .header-slogan__subtitle {
     font-family: "days_one";
     font-size: 28px;
     color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     line-height: 36px; }
+
+/*main*/
+.modal-section {
+  height: 915px;
+  background: url(../assets/img/background2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.navigation {
+  display: flex; }
+  .navigation__left {
+    width: 40%; }
+
+.menu {
+  display: flex;
+  flex-flow: column wrap;
+  height: 400px;
+  justify-content: center; }
+  .menu__item {
+    width: 190px;
+    height: 72px;
+    padding: 0 36px;
+    margin: 12px;
+    background-color: #171B27;
+    border-radius: 25px;
+    line-height: 16px;
+    text-align: center;
+    transition: 0.3s linear; }
+    .menu__item:hover, .menu__item:focus, .menu__item:active {
+      cursor: pointer;
+      background-color: #770FE8; }
+  .menu__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: "days_one";
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    transition: 0.3s linear; }
+    .menu__link:hover, .menu__link:focus, .menu__link:active {
+      cursor: pointer;
+      color: #fff; }
+
+.preview-container {
+  position: absolute;
+  right: 0;
+  min-width: 760px; }
+
+.preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 35px;
+  background-color: #770FE8;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px; }
+  .preview__desc {
+    max-width: 230px; }
+  .preview__text {
+    padding: 15px;
+    font-family: "days_one";
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: none;
+    line-height: 24px; }
+  .preview__image-container {
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    height: 100%; }
+  .preview__image {
+    position: relative;
+    width: 430px;
+    padding: 15px; }
+  .preview__pic {
+    position: absolute;
+    transform: translate(25%, 25%);
+    z-index: 2; }
+  .preview__animated {
+    position: absolute; }
+  .preview__animation {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    width: 330px;
+    height: 240px;
+    opacity: 0.4; }
