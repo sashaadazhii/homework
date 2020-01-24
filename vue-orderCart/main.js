@@ -3,26 +3,24 @@ var app = new Vue({
 
     data: {
         products: [
-            { title: 'Black coffee', img: './assets/5.png', price: 2.65, qty: 0, isVisible: false, isChecked: false },
-            { title: 'White coffee', img: './assets/4.png', price: 3.00, qty: 0, isVisible: false, isChecked: false },
-            { title: 'Latte coffee', img: './assets/3.png', price: 4.20, qty: 0, isVisible: false, isChecked: false },
-            { title: 'Breakfest coffee', img: './assets/2.png', price: 5.50, qty: 0, isVisible: false, isChecked: false },
-            { title: 'Cappuccino', img: './assets/1.png', price: 4.70, qty: 0, isVisible: false, isChecked: false },
+            { title: 'Black coffee', img: './assets/5.png', price: 2.65, qty: 0, isChecked: false },
+            { title: 'White coffee', img: './assets/4.png', price: 3.00, qty: 0, isChecked: false },
+            { title: 'Latte coffee', img: './assets/3.png', price: 4.20, qty: 0, isChecked: false },
+            { title: 'Breakfest coffee', img: './assets/2.png', price: 5.50, qty: 0, isChecked: false },
+            { title: 'Cappuccino', img: './assets/1.png', price: 4.70, qty: 0, isChecked: false },
         ],
 
+        cart: [],
     },
 
     methods: {
         addChecked: function (item) {
-            item.isVisible = true;
             item.qty = item.qty + 1;
             item.isChecked = true;
         },
 
-        removeChecked(index) {
-            if (app.products.isVisible) {
-                app.products.splice(index, 1);
-            }
+        removeQty(product) {
+            product.qty = 0;
         },
 
         incr: function (product) {
