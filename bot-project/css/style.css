@@ -36,7 +36,13 @@ a {
 
 .btn-container--img {
   position: absolute;
-  left: calc(100% - 517px); }
+  left: calc(100% - 517px);
+  z-index: 10; }
+
+.btn-container--modal {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50%); }
 
 @font-face {
   font-family: 'sw_foxes';
@@ -46,18 +52,22 @@ a {
   font-family: 'days_one';
   src: local("days_one"), url("../assets/font/days_one.ttf") format("truetype"); }
 
+body {
+  width: 100%;
+  background: url(../assets/img/backgroundAll.jpg) 50% no-repeat;
+  background-size: cover; }
+
 .header {
   position: relative;
   height: 100vh;
-  background: url(../assets/img/spiral_header.png), url(../assets/img/background1.jpg);
+  background: url(../assets/img/spiral_header.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50%; }
+  background-position-y: 100%; }
   .header .container {
     display: flex;
     justify-content: space-between;
-    height: 100%;
-    padding: 0 15px; }
+    height: 100%; }
 
 .header-section {
   height: 100%; }
@@ -84,6 +94,8 @@ a {
   font-size: 40px;
   color: #FDBD13;
   text-transform: uppercase; }
+  .logo--footer {
+    color: #770FE8; }
 
 .header-slogan {
   display: flex;
@@ -104,15 +116,21 @@ a {
     line-height: 36px; }
 
 /*main*/
+.main {
+  transform: translateY(-165px);
+  width: 100%; }
+
 .modal-section {
-  height: 915px;
-  background: url(../assets/img/background2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%; }
+  height: 1115px;
+  background: url(../assets/img/background2-1.png) 50% no-repeat;
+  background-size: cover; }
+  .modal-section .container {
+    height: 100%; }
 
 .navigation {
-  display: flex; }
+  display: flex;
+  align-items: center;
+  height: 100%; }
   .navigation__left {
     width: 40%; }
 
@@ -193,3 +211,114 @@ a {
     width: 330px;
     height: 240px;
     opacity: 0.4; }
+
+/*info-block*/
+.info-block {
+  min-height: 915px; }
+
+.info-desc__title {
+  font-family: "days_one";
+  font-size: 50px;
+  color: #FDBD13;
+  text-transform: uppercase; }
+
+.info-desc__subtitle {
+  font-family: "days_one";
+  font-size: 80px;
+  color: transparent;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 1px rgba(253, 189, 19, 0.5); }
+
+.instruction {
+  width: 100%; }
+  .instruction__animation {
+    width: 100%; }
+    .instruction__animation img {
+      width: 80%;
+      transform: translateX(-180px); }
+  .instruction__desk {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px; }
+  .instruction__item-container--second {
+    transform: translateY(-35px); }
+  .instruction__item-container--third {
+    transform: translateY(-70px); }
+  .instruction__item-container--fourth {
+    transform: translateY(-150%); }
+  .instruction__item {
+    position: relative;
+    width: 250px;
+    height: 250px; }
+    .instruction__item img {
+      width: 100%;
+      border-radius: 20px; }
+  .instruction__number {
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #FDBD13;
+    font-family: "days_one";
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase; }
+  .instruction__text {
+    position: absolute;
+    right: 0;
+    transform: translateY(-100%);
+    width: 200px;
+    padding: 20px 0;
+    font-family: "days_one";
+    font-size: 14px;
+    color: #FDBD13;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 2px solid #FDBD13; }
+
+/*footer*/
+.footer {
+  min-height: 915px;
+  background: url(../assets/img/spiral_footer.png) 50% no-repeat;
+  background-position-y: 100%;
+  background-size: contain; }
+
+.commercial {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  align-items: center; }
+  .commercial__item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 1 0 20%; }
+  .commercial__animation {
+    display: flex;
+    justify-content: center; }
+
+.icon-svg {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 272px; }
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .footer-info .copyright {
+    max-width: 380px;
+    font-family: "Roboto";
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: none;
+    font-weight: 200;
+    line-height: 18px;
+    text-align: right; }

@@ -25,5 +25,13 @@
 .btn-container--img {
     position: absolute;
     left: calc(100% - 517px);
+    z-index: 10;
+}
+
+.btn-container--modal {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%);
+    
 }
 

@@ -14,19 +14,24 @@
 	src: local('days_one'), url('../assets/font/days_one.ttf') format('truetype');
 }
 
+body {
+    width: 100%;
+    background: url(../assets/img/backgroundAll.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
 .header {
     position: relative;
     height: 100vh;
-    background: url(../assets/img/spiral_header.png), url(../assets/img/background1.jpg);
+    background: url(../assets/img/spiral_header.png);
     background-size:  cover;
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position-y: 100%;
 
     .container {
         display: flex;
         justify-content: space-between;
         height: 100%;
-        padding: 0 15px;
     }
 }
 
@@ -61,7 +66,12 @@
 
 .logo {
     @include font($font-logo, $fsize-logo, $color-primary, $uppercase);
+
+    &--footer {
+        color: $color-secondary;
+    }
 }
+
 
 .header-slogan {
     display: flex;
@@ -80,27 +90,26 @@
 }
 
 /*main*/
-.modal-section {
-    // position: relative;
-    height: 915px;
-    background: url(../assets/img/background2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
 
-    // &:after {
-    //     position: absolute;
-    //     bottom: 100px;
-    //     height: 100%;
-    //     width: 100%;
-    //     content: '';
-    //     background: url(../assets/img/background2-1.jpg);
-    //     background-size: cover;
-    // }
+.main {
+    transform: translateY(-165px);
+    width: 100%;
+}
+
+.modal-section {
+    height: 1115px;
+    background: url(../assets/img/background2-1.png) 50% no-repeat;
+    background-size: cover;
+
+    .container {
+        height: 100%;
+    }
 }
 
 .navigation {
     display: flex;
+    align-items: center;
+    height: 100%;
 
     &__left {
         width: 40%;
@@ -151,15 +160,12 @@
 }
 
 .preview-container {
-    
     position: absolute;
-        right: 0;
-        min-width: 760px;
+    right: 0;
+    min-width: 760px;
 }
 
 .preview {
-    // position: absolute;
-    // right: 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -208,5 +214,146 @@
         width: 330px;
         height: 240px;
         opacity: 0.4;
+    }
+}
+
+/*info-block*/
+.info-block {
+    min-height: 915px;
+}
+
+.info-desc {
+    &__title {
+        @include font($font-primary, 50px, $color-primary, $uppercase);
+    }
+
+    &__subtitle {
+        @include font($font-primary, 80px, transparent, $uppercase);
+        text-shadow: 0px 0px 1px rgba(253, 189, 19, 0.5) ;
+    }
+}
+
+.instruction {
+    width: 100%;
+
+    &__animation {
+        width: 100%;
+
+        img {
+            width: 80%;
+            transform: translateX(-180px);
+        }
+    }
+
+    &__desk {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 20px;
+    }
+
+    &__item-container {
+      
+
+        &--second {
+            transform: translateY(-35px);
+        }
+        &--third {
+            transform: translateY(-70px);
+        }
+
+        &--fourth {
+            transform: translateY(-150%);
+        }
+    }
+
+
+    &__item {
+        position: relative;
+        width: 250px;
+        height: 250px;
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+
+    &__number {
+        position: absolute;
+        top: -60px;
+        left: -60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        background-color: $color-primary;
+        @include font($font-primary, 30px, $color-basic, $uppercase);
+
+    }
+
+    &__text {
+        position: absolute;
+        right: 0;
+        transform: translateY(-100%);
+        width: 200px;
+        padding: 20px 0;
+        @include font($font-primary, $fsize-primary, $color-primary, $uppercase);
+        text-align: center;
+        border-top: 2px solid $color-primary;
+    }
+}
+
+/*footer*/
+.footer {
+    min-height: 915px;
+    background: url(../assets/img/spiral_footer.png) 50% no-repeat;
+    background-position-y: 100%;
+    background-size: contain;
+}
+
+.commercial {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    // align-content: flex-start;
+    align-items: center;
+
+    &__item {
+       height: 100%;
+       display: flex;
+       justify-content: center;
+       flex: 1 0 20%;
+    }
+
+    &__animation {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+.icon-svg {
+    display: flex;
+        justify-content: center;
+        width:100%;
+        max-width: 272px;
+//     max-height: 70px;
+// 
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .copyright {
+        max-width: 380px;
+        @include font('Roboto', $fsize-primary, rgba(255,255,255,0.3), none);
+        font-weight: 200;
+        line-height: 18px;
+        text-align: right;
     }
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Codystar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Codystar|Roboto:100&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./js/slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="./js/slick/slick.css" />
 
@@ -29,7 +29,9 @@
 
                 <div class="header-section__right">
                     <div class="btn-container btn-container--img">
-                        <div class="btn">вибрати бота</div>
+
+                        <div class="btn"><a href="#bot">вибрати бота</a></div>
+
                     </div>
                     <div class="main-image">
                         <img src="./assets/img/robot_cute.png" alt="">
@@ -39,13 +41,13 @@
         </section>
     </header>
 
-    <main>
+    <main class="main">
         <section class="modal-section">
             <div class="container">
                 <div class="navigation">
                     <div class="navigation__left">
                         <nav class="menu-container">
-                            <ul class="menu">
+                            <ul class="menu" id="bot">
                                 <li class="menu__item"> <a href="#" class="menu__link">біологія</a> </li>
                                 <li class="menu__item"> <a href="#" class="menu__link">хімія</a> </li>
                                 <li class="menu__item"> <a href="#" class="menu__link">фізика</a> </li>
@@ -60,7 +62,7 @@
 
                     <div class="navigation__right">
                         <div class="preview-container">
-                            <div class="preview">
+                            <div class="preview preview--get" id="preview--get">
                                 <div class="preview__desc">
                                     <p class="preview__text">І лани, і гори – Все покину і полину... тебе готувати до
                                         ЗНО!</p>
@@ -76,25 +78,130 @@
                                 </div>
 
                             </div>
+
+                            <div class="preview preview--phone" id="preview--phone" style="display: none;">
+                                <div class="preview--phone__text">Твій номер телефону з Telegram</div>
+                                <span>+38</span>
+                                <input type="number" placeholder="096 01 02 003" minlength="10" />
+                                <button id="btn--finish"> готово!</button>
+                            </div>
+
+                            <div class="preview preview--done" id="preview--done" style="display: none;">
+                                <div class="preview--done--text">стукаю в Telegram</div>
+                            </div>
+
+
+                            <div class="btn-container btn-container--modal" id="btn-container--modal">
+                                <div class="btn">хочу собі!</div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="container"> </div>
         </section>
-        <section>
-            <div class="container"></div>
+
+        <section class="info-block">
+            <div class="container">
+                <div class="info-desc">
+                    <div class="info-desc__title">як це працює?</div>
+                    <div class="info-desc__subtitle">три ізі кроки</div>
+                </div>
+                <div class="instruction-container">
+                    <div class="instruction">
+                        <div class="instruction__animation"><img src="./assets/img/robot_cutewhitesmall.gif"
+                                alt="animation">
+                        </div>
+                        <ul class="instruction__desk">
+                            <li class="instruction__item-container">
+                                <div class="instruction__item">
+                                    <div class="instruction__number">1</div>
+                                    <div class="instruction__text">береш свій телефон</div>
+                                    <img src="./assets/img/step1.jpg" alt="step1">
+                                </div>
+                            </li>
+
+                            <li class="instruction__item-container instruction__item-container--second">
+                                <div class="instruction__item">
+                                    <div class="instruction__number">2</div>
+                                    <div class="instruction__text">вибираєш бота</div>
+                                    <img src="./assets/img/step2.jpg" alt="step2">
+                                </div>
+                            </li>
+
+                            <li class="instruction__item-container instruction__item-container--third">
+                                <div class="instruction__item">
+                                    <div class="instruction__number">3</div>
+                                    <div class="instruction__text">вантажиш бота</div>
+                                    <img src="./assets/img/step3.jpg" alt="step3">
+                                </div>
+                            </li>
+
+                            <li class="instruction__item-container instruction__item-container--fourth">
+                                <div class="instruction__item">
+                                    <img src="./assets/img/step4.jpg" alt="step4">
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <section class="commercial-block">
+            <div class="container">
+                <ul class="commercial">
+                    <li class="commercial__item">
+                        <svg class="icon-svg">
+                            <use xlink:href="./assets/img/sprite.svg#tesla"></use>
+                        </svg>
+                    </li>
+                    <li class="commercial__item">
+                        <svg class="icon-svg">
+                            <use xlink:href="./assets/img/sprite.svg#apple"></use>
+                        </svg>
+                    </li>
+                    <li class="commercial__item">
+                        <svg class="icon-svg">
+                            <use xlink:href="./assets/img/sprite.svg#beetroot"></use>
+                        </svg>
+                    </li>
+                    <li class="commercial__item">
+                        <svg class="icon-svg">
+                            <use xlink:href="./assets/img/sprite.svg#google"></use>
+                        </svg>
+                    </li>
+                    <li class="commercial__item">
+                        <svg class="icon-svg">
+                            <use xlink:href="./assets/img/sprite.svg#amazone"></use>
+                        </svg>
+                    </li>
+                </ul>
+
+                <div class="commercial__animation"><img src="./assets/img/yogismall.gif" alt="animation"
+                        class="commercial__img"></div>
+
+                <div class="footer-info">
+                    <div class="logo-wrapper">
+                        <p class="logo logo--footer">znobot</p>
+                    </div>
+
+                    <div class="copyright">
+                        Copyright © ZNOBOT 2019. Всі права захищено. Розроблено Larisa Abramovich
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
     <script src="./js/main.js"></script>
-
-    <script src="./js/slick/slick.min.js"></script>
 
 </body>
 
