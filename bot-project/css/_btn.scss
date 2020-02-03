@@ -1,5 +1,3 @@
-.btn-container {
-
     .btn {
         min-width: 205px;
         max-width: 255px;
@@ -10,7 +8,7 @@
         @include font($font-primary, $fsize-modal, $color-primary, $uppercase);
         text-align: center;
         line-height: 25px;
-        transition: all 0.3s linear;
+        transition: all 0.2s linear;
 
         &:hover,
         &:focus {
@@ -19,13 +17,29 @@
             background: rgba(253, 189, 19, 0.15);
           
         }
+
+        a {
+            color: $color-primary;
+        }
     }
-}
 
 .btn-container--img {
     position: absolute;
     left: calc(100% - 517px);
     z-index: 10;
+
+    @include tablet {
+        top: 30px;
+    }
+
+    @include phablet {
+        top: 30px;
+        left: calc(100% - 380px);
+    }
+
+    @include mobile {
+        left: auto;
+    }
 }
 
 .btn-container--modal {

@@ -12,6 +12,12 @@ a {
     text-decoration: none;;
 }
 
+body {
+    width: 100%;
+    background: url(../assets/img/backgroundAll.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
 .container {
     width: 1440px;
     max-width: 100%;

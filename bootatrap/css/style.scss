@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+$fsize-primary: 14px;
+$fsize-secondary: 16px;
+$size-title-small: 18px;
+$fsize-title: 30px;
+$uppercase: uppercase;
+$color-basic: #fff;
+$color-primary: #7beec7;
+$color-text: #60606e;
+$color-text-secondary: #999;
+
+@mixin font($font, $size, $color) { 
+    font-family: $font;
+    font-size: $size;
+    color: $color;   
+}
+.container {
+    padding-bottom: 150px;
+}
+.header {
+    // height: 100vh;
+    min-height: 950px;
+    padding-bottom: 150px;
+}
+
+.header-layout {
+    // height: 100vh;
+
+    max-height: 850px;
+    background: url(../assets/img/headerbgr.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
+.header-menu {
+    height: 100px;
+
+    .logo {
+        @include font($font-secondary, $size-title-small, $color-text);
+    }
+}
+
+.nav {
+
+    align-items: center;
+
+    &-link {
+        @include font($font-secondary, 12px, $color-text);
+    }
+}
+
+.header-item-img {
+    width: 100%;
+    max-height: 400px;
+}
+
+.slider {
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+
+    &__item {
+        transform: translateY(-100%);
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__prev {
+        @include font($font-secondary, $size-title-small, $color-text);
+        
+        .span {
+            background-color: $color-primary;
+        }
+    }
+
+    &__slogan {
+        DISPLAY: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 100%;
+        @include font($font-secondary, 48px, $color-text);
+        text-align: center;
+        border: 10px solid $color-text;
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+}
+
+
+.title-block {
+
+}
+.title {
+    position: relative;
+    padding-bottom: 30px;
+    @include font($font-secondary, $fsize-title, $color-text);
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        transform: translateY(100%);
+        width: 68px;
+        height: 21px;
+        background-color: $color-primary;
+        z-index: -1;
+    }
+
+    &--small {
+        padding: 20px 0 30px;
+        @include font($font-secondary, $size-title-small, $color-text);
+
+        &::before {
+            display: none;
+        }
+    }
+
+    &--light {
+        color: $color-basic;
+    }
+}
+
+.subtitle {
+    @include font($font-primary, $fsize-primary, $color-text);
+
+}
+
+.text {
+    position: relative;
+    padding-bottom: 25px;
+    @include font($font-primary, $fsize-secondary, $color-text);
+    line-height: 25px;
+    overflow: hidden;
+}
+
+.btn-container-header {
+    // margin-top: 20px;
+    transform: translateY(50%);
+    float: right;
+}
+.btn--primary {
+    min-width: 165px;
+    padding: 18px;
+    @include font($font-secondary, $fsize-primary, $color-basic);
+    background-color: $color-primary;
+    border-radius: 0;
+}
+
+.btn--light {
+    color: $color-primary;
+    background-color: $color-basic;
+}
+
+.about-block {
+    height: 100%;
+}
+
+.about {
+    padding: 10px 0 30px;
+    
+    &__desc {
+        @include font($font-primary, $fsize-primary, $color-text-secondary);
+        line-height: 30px;
+    }
+}
+
+ion-icon {
+    font-size: 30px;
+    color: $color-text;
+  }
+
+.category-menu {
+    .title--small {
+        font-size: 30px;
+    }
+}
+
+.category-menu__all {
+    @include font($font-secondary, $fsize-primary, $color-basic);
+
+    span {
+        padding: 5px 20px;
+        background-color: $color-primary;
+    }
+}
+
+.category {
+    padding: 20px;
+
+    &__item {
+        @include font($font-secondary, $fsize-primary, $color-text);
+        line-height: 48px;
+        transition: 0.2s linear;
+
+        &:hover,
+        &:active,
+        &:focus {
+            cursor: pointer;
+            color: $color-primary;
+        }
+    }
+}
+
+  /*grid*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "first second third" "first second third" "first second third";
+  
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;}
+  
+  .first {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr 2fr;
+    grid-template-areas: "item-1" "item-2" "item-3";
+    grid-area: first;
+  }
+  
+  .item-1 { grid-area: item-1; }
+  .item-2 { grid-area: item-2; }
+  .item-3 { grid-area: item-3; }
+  .second {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1.5fr;
+    grid-template-areas: "item-4" "item-5" "item-6";
+    grid-area: second;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  
+  .item-5 { grid-area: item-5; }
+  .item-4 { grid-area: item-4; }
+  .item-6 { grid-area: item-6; }
+  
+  .third {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1.5fr;
+    grid-template-areas: "item-7" "item-8" "item-9";
+    grid-area: third;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  
+  .item-7 { grid-area: item-7; }
+  .item-8 { grid-area: item-8; }
+  .item-9 { grid-area: item-9; }
+
+
+  /*footer*/
+  .container-fluid--footer {
+      padding: 50px 0;
+      background-color: $color-primary;
+  }
+
+  .email-block {
+      padding: 20px 25px;
+      background-color: $color-basic;
+
+      .title::before {
+          display: none;
+      }
+
+      &__text {
+          padding: 20px 0 30px;
+        @include font($font-primary, $fsize-primary, $color-text-secondary);
+
+      }
+
+      .btn--primary {
+          float: right;
+          transform: translateY(-100%);
+          border: none;
+          border: 1px solid $color-primary;
+      }
+  }
+
+  .input-email {
+    width: 100%;
+    padding: 18px;
+    @include font($font-primary, $fsize-primary, $color-text-secondary);
+    border: 1px solid $color-text-secondary;
+
+    &:focus {
+        outline: none;
+    }
+  }

@@ -10,6 +10,8 @@ $(document).ready(function () {
         }
     });
 
+    // $(".preview--phone__input").mask("999 999 9999", { placeholder: " ____ ____ _____" });
+    $(".preview--phone__input").mask("999 999 9999");
 
     // modal
     let $modalDefault = $('#preview--get');
@@ -28,6 +30,24 @@ $(document).ready(function () {
     $closeBtn.click(function () {
         $modalFirst.hide();
         $finishWindow.show();
-    })
+    });
+
+    $(document).mouseup(function (e) {
+        if (!$finishWindow.is(e.target) && $finishWindow.has(e.target).length === 0) {
+            $finishWindow.fadeOut(300, function () {
+                $modalDefault.fadeIn(300);
+            });
+        }
+    });
+
+
+
+
+    //to top
+    $("#toTop").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 800);
+    });
+
+
 
 })

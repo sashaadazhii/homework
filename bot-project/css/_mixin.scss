@@ -3,7 +3,7 @@
     font-size: $size;
     color: $color;   
     text-transform: $transform;
-}
+    }
 
 @mixin tablet {
     @media only screen and (max-width: #{$tablet-screen-width}) {
