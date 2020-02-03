@@ -36,18 +36,16 @@ $(document).ready(function () {
         if (!$finishWindow.is(e.target) && $finishWindow.has(e.target).length === 0) {
             $finishWindow.fadeOut(300, function () {
                 $modalDefault.fadeIn(300);
+                $openBtn.fadeIn(300);
             });
         }
     });
-
-
 
 
     //to top
     $("#toTop").click(function () {
         $("html, body").animate({ scrollTop: 0 }, 800);
     });
-
 
 
 })
