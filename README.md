@@ -126,3 +126,7 @@ Chatbot
 
 Bootstrap
 [Bootstrap](https://sashaadazhii.github.io/homework/bootatrap/index.html)
+
+Vue Router (Login/Register/Logout)
+[Vue-Router](https://sashaadazhii.github.io/homework/vue-router/index.html#/)
+
