@@ -13,7 +13,6 @@
 <body>
     <div id="app">
 
-
         <div class="container" v-if="!isAuthenticated">
             <div class="row">
                 <router-link to="/register">Register</router-link>
@@ -28,7 +27,7 @@
 
         <div class="container">
             <div class="row">
-                <router-link to="/cat">CAT</router-link>
+                <router-link to="/cats">CATs</router-link>
             </div>
         </div>
 
@@ -37,7 +36,6 @@
                 <router-link to="/login" v-on:click.native="deleteToken">Logout</router-link>
             </div>
         </div>
-
 
         <router-view></router-view>
     </div>

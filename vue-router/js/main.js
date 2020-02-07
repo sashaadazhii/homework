@@ -10,8 +10,6 @@ const Login = {
             message: '',
             btnLogin: false,
             token: '',
-            catURL: '',
-
         }
     },
 
@@ -57,7 +55,7 @@ const Login = {
                         this.token = response.data.token;
                         this.isAuthenticated = true;
                         localStorage.setItem('token', this.token);
-                        this.$router.push('cat');
+                        // this.$router.push('cat');
                     }
                     console.log(response.data);
                 });
@@ -77,7 +75,6 @@ const Register = {
             message: '',
             btnRegister: false,
             token: '',
-            catURL: '',
         }
     },
     template: `
@@ -102,30 +99,32 @@ const Register = {
     `,
 };
 
-const Cat = {
+const Cats = {
     data: function () {
         return {
-            users: {
-                email: '',
-                password: '',
-            },
             error: false,
             success: false,
-            message: '',
-            btnLogin: false,
             token: '',
-            catURL: '',
+            cats: [],
 
         }
     },
     template: `
         <div class="offset-sm-2 col-sm-6">
-            <h4>CAT from token</h4>
-            <img v-bind:src="catURL" alt="cat">
+            <h4>Choose your cat</h4>
+            <ul class="list-group">
+                <li class="list-group-item" v-for="cat in cats">
+                    <div> {{ cat.name }}</div>
+                    <img v-bind:src="cat.picture" alt="cat">
+                    <div>
+                        <router-link
+                        v-bind:to="'/cats/' + cat.id">see this cat</router-link>
+                    </div>    
+                </li>
+            </ul>
         </div>
     `,
     mounted() {
-
         if (localStorage.getItem('token')) {
             this.token = localStorage.getItem('token');
             this.getCat();
@@ -135,30 +134,65 @@ const Cat = {
     methods: {
         getCat() {
             axios
-                .get(`http://46.101.202.248:9001/cat?token=${this.token}`, {
-                    email: this.users.email,
-                    password: this.users.password,
-
-                })
+                .get(`http://46.101.202.248:9001/cats?token=${this.token}`)
                 .then((response) => {
                     if (response.data.status === 'error') {
                         this.error = true;
                         this.success = false;
-                        this.message = response.data.message;
 
                     } else {
                         this.success = true;
                         this.error = false;
-                        this.message = response.data.message;
-                        this.catURL = response.data.cat;
+                        this.cats = response.data;
+                    }
+                });
+        },
+    }
+};
 
+const CatsDetails = {
+    data: function () {
+        return {
+            token: '',
+            cat: {},
+        }
+    },
+    template: `
+    <div class="offset-sm-2 col-sm-6">
+        <div>
+            <router-link to="/cats">
+                <button> Back </button>
+            </router-link>
+        </div>
+        <div>
+            <div> {{ cat.name }}</div>
+            <img v-bind:src="cat.picture" alt="cat">
+            <div> Color: {{ cat.color }}</div>
+            <div> {{ cat.description }}</div>
+         </div>
+    </div>
+    `,
 
-                        // router.beforeEach((to, from, next) => {
-                        //     if (!app.isAuthenticated) next('/login')
-                        //     else next('/register')
-                        // })
+    mounted() {
+        if (localStorage.getItem('token')) {
+            this.token = localStorage.getItem('token');
+            this.getCatInfo();
+        }
+    },
 
-                        localStorage.setItem('token', this.token);
+    methods: {
+        getCatInfo() {
+            axios
+                .get(`http://46.101.202.248:9001/cats/${this.$route.params.id}?token=${this.token}`)
+                .then((response) => {
+                    if (response.data.status === 'error') {
+                        this.error = true;
+                        this.success = false;
+
+                    } else {
+                        this.success = true;
+                        this.error = false;
+                        this.cat = response.data;
                     }
                     console.log(response.data);
                 });
@@ -169,7 +203,8 @@ const Cat = {
 const routes = [
     { path: '/register', component: Register },
     { path: '/login', component: Login },
-    { path: '/cat', component: Cat },
+    { path: '/cats', component: Cats },
+    { path: '/cats/:id', component: CatsDetails },
 ]
 
 const router = new VueRouter({
