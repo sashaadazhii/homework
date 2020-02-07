@@ -43,9 +43,7 @@
 }
 
 .btn-container--modal {
-    display: flex;
-    justify-content: center;
-    transform: translateY(-50%);
-    
+    transform: translateY(100%);
+    align-self: flex-end;
 }
 

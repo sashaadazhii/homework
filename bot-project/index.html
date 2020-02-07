@@ -40,7 +40,7 @@
     </header>
 
     <main class="main">
-        <section class="modal-section">
+        <section class="modal-section" id="app">
             <div class="container">
                 <div class="navigation">
                     <div class="navigation__left">
@@ -61,7 +61,10 @@
 
                     <div class="navigation__right">
                         <div class="preview-container">
-                            <div class="preview preview--get" id="preview--get">
+
+
+                            <!-- 0 -->
+                            <div class="preview preview--get" v-if="showModalDefault">
                                 <div class="preview__desc">
                                     <p class="preview__text">І лани, і гори – Все покину і полину... тебе готувати до
                                         ЗНО!</p>
@@ -75,25 +78,27 @@
                                         <img src="./assets/img/0.gif" class="preview__animation" alt="animation">
                                     </div>
                                 </div>
+                                <div class="btn-container btn-container--modal" @click.prevent="openNextWindow">
+                                    <div class="btn">хочу собі!</div>
+                                </div>
                             </div>
 
-                            <div class="preview preview--phone" id="preview--phone" style="display: none;">
+                            <!-- 1 -->
+                            <div class="preview preview--phone" v-if="showModalOne">
                                 <div class="preview--phone__text">Твій номер телефону з Telegram</div>
                                 <div class="preview--phone__input-block">
                                     <span>+38</span>
-                                    <input type="tel" class="preview--phone__input" placeholder=" ___ ___ ____" />
+                                    <input type="tel" class="preview--phone__input" placeholder=" ___ ___ ____"
+                                        maxlength="10" autofocus required />
                                 </div>
-                                <div class="btn btn--finish" id="btn--finish"> готово!</div>
+                                <div class="btn btn--finish" id="btn--finish"
+                                    @click.prevent="showModalTwo = !showModalTwo">готово!</div>
                             </div>
+                            <!-- 2 -->
 
-                            <div class="preview preview--done" id="preview--done" style="display: none;">
+                            <div class="preview preview--done" v-if="showModalTwo">
                                 <div class="preview--done__text">стукаю в Telegram</div>
                             </div>
-
-                            <div class="btn-container btn-container--modal" id="btn-container--modal">
-                                <div class="btn">хочу собі!</div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -188,9 +193,10 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-    <script src="./js/jquery.maskedinput.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <script src="./js/main.js"></script>
+    <script src="./js/modal.js"></script>
 
 </body>
 
