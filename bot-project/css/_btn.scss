@@ -45,5 +45,6 @@
 .btn-container--modal {
     transform: translateY(100%);
     align-self: flex-end;
+    z-index: 10;
 }
 
