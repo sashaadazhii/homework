@@ -59,7 +59,7 @@ body {
 .btn-container--modal {
   transform: translateY(100%);
   align-self: flex-end;
-  z-index: 2; }
+  z-index: 10; }
 
 @font-face {
   font-family: 'sw_foxes';
@@ -246,9 +246,15 @@ body {
   background-color: #770FE8;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px; }
+  @media only screen and (max-width: 590px) {
+    .preview {
+      flex-direction: column; } }
   .preview__desc {
-    max-width: 230px;
+    min-width: 230px;
     width: 100%; }
+    @media only screen and (max-width: 590px) {
+      .preview__desc {
+        width: 100%; } }
   .preview__text {
     padding: 15px;
     font-family: "days_one";

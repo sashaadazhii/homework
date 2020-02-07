@@ -242,9 +242,17 @@ body {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 
+    @include mobile {
+        flex-direction: column;
+    }
+
     &__desc {
-        max-width: 230px;
+        min-width: 230px;
         width: 100%;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__text {
