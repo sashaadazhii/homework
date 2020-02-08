@@ -248,7 +248,8 @@ body {
 
     &__desc {
         min-width: 230px;
-        width: 100%;
+        width: 230px;
+        // width: 100%;
 
         @include mobile {
             width: 100%;
