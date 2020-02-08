@@ -21,7 +21,6 @@ body {
 }
 
 .header {
-    // position: relative;
     height: 100vh;
     background: url(../assets/img/spiral_header.png);
     background-size:  cover;
@@ -235,6 +234,7 @@ body {
 .preview {
     position: relative;
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     min-height: 330px;
     padding: 35px;
@@ -319,7 +319,6 @@ body {
         height: 39px;
         border: 2px solid rgba(255, 255, 255, 0.3);
         padding: 0 10px;
-        // box-sizing: border-box;
         border-radius: 10px;
         background: transparent;
         @include font($font-primary, $fsize-modal, rgba(255, 255, 255, 0.85), none);
@@ -362,7 +361,6 @@ body {
 
     }
 }
-
 
 /*info-block*/
 .info-block {
@@ -466,7 +464,6 @@ body {
             top: -30px;
             left: -30px;
         }
-
     }
 
     &__text {

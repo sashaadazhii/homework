@@ -15,7 +15,6 @@
             cursor: pointer;
             outline: none;
             background: rgba(253, 189, 19, 0.15);
-          
         }
 
         a {
@@ -45,6 +44,7 @@
 .btn-container--modal {
     transform: translateY(100%);
     align-self: flex-end;
+    margin: 0 auto;
     z-index: 10;
 }
 
