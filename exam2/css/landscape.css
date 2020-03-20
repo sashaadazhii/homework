@@ -1,0 +1,5 @@
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .header-menu, .header .slider-container .slider {
+    height: auto; }
+  .menu {
+    flex-flow: row wrap; } }

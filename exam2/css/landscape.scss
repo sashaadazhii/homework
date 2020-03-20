@@ -1,0 +1,12 @@
+@import 'variables.scss';
+@import 'mixin.scss';
+
+@include phabletLandscape {
+   .header-menu, .header .slider-container .slider {
+     height: auto;
+    }
+    
+  .menu {
+    flex-flow: row wrap;
+  }
+}

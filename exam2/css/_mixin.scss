@@ -23,3 +23,9 @@
         @content;
     }
 }
+
+@mixin phabletLandscape {
+    @media only screen and (max-width: #{$phablet-screen-width}) and (orientation: landscape){
+        @content;
+    }
+}
