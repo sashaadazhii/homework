@@ -57,10 +57,17 @@ $(document).ready(function () {  // main slider
 
     //dots active class
     var $dot = $('.dots__item');
+    var $dotLink = $('.dots__link');
+
     $dot.click(function (event) {
         $dot.removeClass('dots__item--active').eq($(this).index())
             .addClass('dots__item--active');
     });
+
+    $dotLink.click(function () {
+        $(this).attr("style", "opacity:1;").animate({ opacity: "0" }, 1000)
+    })
+
 
     //mobile menu
     var containerWidth = $("body").width();
@@ -111,5 +118,4 @@ $(document).ready(function () {  // main slider
 
         $('.scroll-container').hide()
     }
-
 });
