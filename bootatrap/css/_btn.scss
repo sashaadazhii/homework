@@ -1,0 +1,29 @@
+@import "mixin";
+
+.btn {
+    transition: 0.2s linear;
+    
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-container-header {
+    transform: translateY(50%);
+    float: right;
+}
+
+.btn--primary {
+    min-width: 165px;
+    padding: 18px;
+    @include font($font-secondary, $fsize-primary, $color-basic);
+    background-color: $color-primary;
+    border-radius: 0;
+}
+
+.btn--light {
+    color: $color-primary;
+    background-color: $color-basic;
+}

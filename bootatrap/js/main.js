@@ -5,18 +5,11 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        // autoplay: true,
-        // autoplaySpeed: 1500,
-        vertical: true,
-        verticalSwiping: true,
-
-        responsive: [
-            {
-                breakpoint: 980,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },]
+        dots: false,
+        fade: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        cssEase: 'linear',
     });
 })
