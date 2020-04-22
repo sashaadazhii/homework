@@ -94,7 +94,18 @@
     }
 }
 
+.dropdown-menu {
+    border: none;
+}
 
+.dropdown-item {
+    @include font($font-secondary, 12px, $color-text);
+
+    &:hover,
+    &:active {
+        background: $color-primary;
+    }
+}
 
 .container--header-bottom {
     // height: 400px;
@@ -175,7 +186,7 @@ position: relative;
     }
 
     &--small {
-        padding: 20px 0 30px;
+        padding: 19px 0 28px;
         @include font($font-secondary, $size-title-small, $color-text);
 
         &::before {
@@ -190,7 +201,6 @@ position: relative;
 
 .subtitle {
     @include font($font-primary, $fsize-primary, $color-text);
-
 }
 
 .text {
@@ -211,6 +221,10 @@ position: relative;
     &__desc {
         @include font($font-primary, $fsize-primary, $color-text-secondary);
         line-height: 30px;
+    }
+
+    @include mobile {
+        text-align: center;
     }
 }
 
@@ -252,10 +266,29 @@ ion-icon {
 }
 
 .flex-column {
-    max-width: 260px;
-    // margin: 0 15px;
+    display: flex;
+    flex: 1 0 auto;
+    max-width: 33.33%;
+
     img {
+        display: inline-block;
         margin: 15px;
+        object-fit: cover;
+    }
+
+    @include mobile {
+        max-width: 50%;
+
+        &:last-child {
+            display: flex;
+            flex-flow: row wrap !important;
+
+            img {
+                // display: flex;
+                // flex-flow: row wrap !important;
+                width: 100%;
+            }
+        }
     }
 }
 

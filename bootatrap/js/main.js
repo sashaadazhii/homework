@@ -20,8 +20,11 @@ $(document).ready(function () {
     var $toggle = $(".toggle");
     var shown = false;
 
+    $toggle.hide();
+
     if (containerWidth <= 992) {
         $menu.hide();
+        $toggle.show();
 
         $toggle.click(function () {
 
