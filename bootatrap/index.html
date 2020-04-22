@@ -17,18 +17,18 @@
 
 <body>
     <header class="header">
-        <!-- <div class="container-fluid header-layout"> -->
-            <div class="container header-menu">
-                <div class="row align-items-center">
-
-                    <div class="col-sm-2">
-                        <div class="logo align-items-center">
-                            <p class="text-uppercase logo__slogan">akad.</p>
-                        </div>
+        <div class="container header-menu">
+                <div class="row">
+                <div class="col-sm-2">
+                    <div class="logo align-items-center">
+                        <a href="#" class="text-uppercase logo__slogan">akad.</a>
                     </div>
+                </div>
 
-                    <div class="col-sm-10">
-                        <ul class="nav justify-content-end text-uppercase">
+                <div class="col-sm-10">
+                    <div class="nav-menu">
+
+                        <ul class="nav menu justify-content-end text-uppercase">
                             <li class="nav-item">
                                 <a class="nav-link active" href="#">home</a>
                             </li>
@@ -48,13 +48,19 @@
                                 <a class="nav-link" href="#">contact us</a>
                             </li>
                         </ul>
+
+                        <div class="toggle">
+                            <div class="toggle__item toggle__item--one"></div>
+                            <div class="toggle__item toggle__item--two"></div>
+                            <div class="toggle__item toggle__item--three"></div>
+                        </div>
                     </div>
+
                 </div>
             </div>
-
-
-        <!-- </div> -->
+        </div>
     </header>
+
     <section class="container-fluid container--slider">
         <div class="row align-items-center">
             <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1">
@@ -85,8 +91,7 @@
 
     <div class="container container--header-bottom">
         <div class="row">
-            <div class="col-md-5 col-sm-12"><img src="./assets/img/header.jpg" alt="chear"
-                    class="header-item-img">
+            <div class="col-md-5 col-sm-12"><img src="./assets/img/header.jpg" alt="chear" class="header-item-img">
             </div>
 
             <div class=" offset-md-1 col-md-6 col-sm-12 header-info">
@@ -253,7 +258,7 @@
         <div class="container container--footer-menu">
             <div class="row">
                 <div class="col-md-8 col-sm-12">
-                    <ul class="nav text-uppercase nav--footer">
+                    <ul class="nav menu text-uppercase nav--footer">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">home</a>
                         </li>
@@ -306,12 +311,12 @@
 
 
 
+    <script src="./js/jquery.js"></script>
 
-
-
+<!-- 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -322,6 +327,7 @@
 
     <script src="./js/slick/slick.min.js"></script>
     <script src="./js/main.js"></script>
+  
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 

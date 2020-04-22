@@ -2,6 +2,7 @@
 @import "mixin";
 @import "layouts";
 @import "btn";
+@import "toggle";
 
 .header {
     position: absolute;
@@ -18,7 +19,18 @@
 
         .row {
             height: 100%;
+            flex-wrap: nowrap;
+            align-items: center;
+
+            @include tablet {
+                align-items: flex-start;
+                padding-top: 30px;
+            }
         }
+    }
+
+    @include tablet {
+        height: auto;
     }
 }
 
@@ -41,8 +53,12 @@
     }
 }
 
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .nav {
-    
     &-link {
         position: relative;
         padding-bottom: 10px;
@@ -72,7 +88,13 @@
 
         }
     }
+
+    @include tablet {
+        flex-direction: column;
+    }
 }
+
+
 
 .container--header-bottom {
     // height: 400px;
