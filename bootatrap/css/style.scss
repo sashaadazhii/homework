@@ -109,7 +109,7 @@
 
 .container--header-bottom {
     // height: 400px;
-    margin-top: -25%;
+    margin-top: -300px;
 }
 
 .header-item-img {
@@ -251,6 +251,10 @@ ion-icon {
 .category {
     padding: 20px;
 
+    @include phablet {
+        display: flex;
+    }
+
     &__item {
         @include font($font-secondary, $fsize-primary, $color-text);
         line-height: 48px;
@@ -283,24 +287,33 @@ ion-icon {
             display: flex;
             flex-flow: row wrap !important;
 
-            img {
-                // display: flex;
-                // flex-flow: row wrap !important;
-                width: 100%;
-            }
+            // img {
+            //     display: flex;
+            // }
         }
     }
 }
-
 
   /*footer*/
   .container-fluid--footer {
       padding: 50px 0;
       background-color: $color-primary;
+
+      .container {
+          margin-top: 0;
+      }
+  }
+
+  .container--footer-menu .nav {
+    @include tablet {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }  
   }
 
   .email-block {
       padding: 20px 25px;
+      margin-top: 20px;
       background-color: $color-basic;
 
       .title::before {
@@ -310,14 +323,15 @@ ion-icon {
       &__text {
           padding: 20px 0 30px;
         @include font($font-primary, $fsize-primary, $color-text-secondary);
-
       }
 
-      .btn--primary {
-          float: right;
-          transform: translateY(-100%);
-          border: none;
-          border: 1px solid $color-primary;
+      &__input {
+        display: flex;
+
+        @include phablet {
+            flex-flow: row wrap;
+            justify-content: center;
+        }
       }
   }
 
@@ -326,6 +340,7 @@ ion-icon {
     padding: 18px;
     @include font($font-primary, $fsize-primary, $color-text-secondary);
     border: 1px solid $color-text-secondary;
+    // border-right: none;
 
     &:focus {
         outline: none;

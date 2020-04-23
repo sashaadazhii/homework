@@ -17,11 +17,12 @@ a {
   margin-top: 150px; }
   @media only screen and (max-width: 992px) {
     .container {
-      margin-top: 80px; } }
+      margin-top: 100px; } }
   .container--footer-menu {
     padding-bottom: 50px; }
 
 .btn {
+  outline: none;
   transition: 0.2s linear; }
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
@@ -33,6 +34,7 @@ a {
 .btn--primary {
   min-width: 165px;
   padding: 18px;
+  transform: translateX(-1px);
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   color: #fff;
@@ -148,7 +150,7 @@ a {
     background: #7beec7; }
 
 .container--header-bottom {
-  margin-top: -25%; }
+  margin-top: -300px; }
 
 .header-item-img {
   width: 100%;
@@ -266,6 +268,9 @@ ion-icon {
 
 .category {
   padding: 20px; }
+  @media only screen and (max-width: 768px) {
+    .category {
+      display: flex; } }
   .category__item {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
@@ -289,17 +294,23 @@ ion-icon {
       max-width: 50%; }
       .flex-column:last-child {
         display: flex;
-        flex-flow: row wrap !important; }
-        .flex-column:last-child img {
-          width: 100%; } }
+        flex-flow: row wrap !important; } }
 
 /*footer*/
 .container-fluid--footer {
   padding: 50px 0;
   background-color: #7beec7; }
+  .container-fluid--footer .container {
+    margin-top: 0; }
+
+@media only screen and (max-width: 992px) {
+  .container--footer-menu .nav {
+    flex-flow: row wrap;
+    justify-content: space-evenly; } }
 
 .email-block {
   padding: 20px 25px;
+  margin-top: 20px;
   background-color: #fff; }
   .email-block .title::before {
     display: none; }
@@ -308,11 +319,12 @@ ion-icon {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     color: #999; }
-  .email-block .btn--primary {
-    float: right;
-    transform: translateY(-100%);
-    border: none;
-    border: 1px solid #7beec7; }
+  .email-block__input {
+    display: flex; }
+    @media only screen and (max-width: 768px) {
+      .email-block__input {
+        flex-flow: row wrap;
+        justify-content: center; } }
 
 .input-email {
   width: 100%;
