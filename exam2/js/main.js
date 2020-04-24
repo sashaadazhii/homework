@@ -52,12 +52,15 @@ $(document).ready(function () {  // main slider
             $('html, body').stop().animate({
                 scrollTop: target.offset().top
             }, 700);
+            // console.log($('.dots__link').attr('data-tooltip'))
         }
     });
 
     //dots active class
     var $dot = $('.dots__item');
     var $dotLink = $('.dots__link');
+
+
 
     $dot.click(function (event) {
         $dot.removeClass('dots__item--active').eq($(this).index())
@@ -67,6 +70,16 @@ $(document).ready(function () {  // main slider
     $dotLink.click(function () {
         $(this).attr("style", "opacity:1;").animate({ opacity: "0" }, 1000)
     })
+
+    $(window).scroll(function () {
+        let href = $('a[href^="#"]').attr('href');
+        let attribute = $dotLink.attr('data-tooltip')
+        if (href === ('#' + attribute)) {
+            console.log('ok! ' + attribute + href)
+        } else {
+            console.log('href: ' + href + '  attributeee: ' + attribute)
+        }
+    });
 
 
     //mobile menu
@@ -104,9 +117,9 @@ $(document).ready(function () {  // main slider
         })
     }
 
-    window.onorientationchange = function () {
-        console.log("the orientation of the device is now " + screen.orientation.angle);
-    };
+    // window.onorientationchange = function () {
+    //     console.log("the orientation of the device is now " + screen.orientation.angle);
+    // };
 
     if (window.matchMedia("(orientation: landscape)").matches) {
         $hamburger.click(function () {
