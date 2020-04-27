@@ -4,6 +4,8 @@
 @import "btn";
 @import "toggle";
 
+/*header*/
+
 .header {
     position: absolute;
     top:0;
@@ -34,18 +36,9 @@
     }
 }
 
-.container--slider {
-    position: relative;
-    width: 100%;
-    height: 850px;
-    padding-top: 250px;
-    background: url(../assets/img/headerbgr.jpg) 50% no-repeat;
-    background-size: cover;
-}
-
 .header-menu {
     .logo {
-        @include font($font-secondary, $size-title-small, $color-text);
+        @include font($font-secondary, $fsize-title-small, $color-text);
     
         &__slogan {
             margin: 0;
@@ -107,6 +100,17 @@
     }
 }
 
+/*end of header*/
+
+.container--slider {
+    position: relative;
+    width: 100%;
+    height: 850px;
+    padding-top: 250px;
+    background: url(../assets/img/headerbgr.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
 .container--header-bottom {
     // height: 400px;
     margin-top: -300px;
@@ -131,7 +135,7 @@
 
     &__prev {
         margin: 0;
-        @include font($font-secondary, $size-title-small, $color-text);
+        @include font($font-secondary, $fsize-title-small, $color-text);
         
         .span {
             display: flex;
@@ -160,47 +164,13 @@
 }
 
 .header-info {
-position: relative;
+    position: relative;
 
     .btn-container-header {
         position: absolute;
         right: 0;
         transform: translateY(50%);
     }
-}
-
-.title {
-    position: relative;
-    padding-bottom: 30px;
-    @include font($font-secondary, $fsize-title, $color-text);
-    z-index: 1;
-
-    &::before {
-        content: '';
-        position: absolute;
-        transform: translateY(100%);
-        width: 68px;
-        height: 21px;
-        background-color: $color-primary;
-        z-index: -1;
-    }
-
-    &--small {
-        padding: 19px 0 28px;
-        @include font($font-secondary, $size-title-small, $color-text);
-
-        &::before {
-            display: none;
-        }
-    }
-
-    &--light {
-        color: $color-basic;
-    }
-}
-
-.subtitle {
-    @include font($font-primary, $fsize-primary, $color-text);
 }
 
 .text {
@@ -399,3 +369,173 @@ ion-icon {
   .img-inner {
       width: 100%;
   }
+
+  .title {
+    position: relative;
+    padding-bottom: 30px;
+    @include font($font-secondary, $fsize-title, $color-text);
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        transform: translateY(100%);
+        width: 68px;
+        height: 21px;
+        background-color: $color-primary;
+        z-index: -1;
+    }
+
+    &--small {
+        padding: 19px 0 28px;
+        @include font($font-secondary, $fsize-title-small, $color-text);
+
+        &::before {
+            display: none;
+        }
+    }
+
+    &--page {
+        padding-bottom: 20px;
+        font-size: $fsize-page-title;
+
+        &::before {
+            display: none;
+        }
+    }
+    &--subtitle {
+        font-size: $fsize-primary;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    &--light {
+        color: $color-basic;
+    }
+}
+
+.text {
+    @include font($font-primary, $fsize-primary, $color-text);
+    line-height: 30px;
+}
+
+  /*about*/
+  .header-about {
+    position: relative;
+    min-height: 500px;
+    background: url(../assets/img/site-hero2.jpg) 50% no-repeat;
+    background-size: cover;
+  }
+
+  .page-title-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 100%;
+    text-align: center;
+
+    @include mobile {
+        transform: translate(-50%, 25%);
+    }
+  }
+
+.desc {
+    .title {
+        padding-bottom: 15px;
+    }
+}
+
+.blocks {
+    margin-top: 100px;
+
+    &__title-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        background: $color-primary;
+    }
+
+    ion-icon {
+        font-size: 25px;
+        color: $color-basic
+      }
+}
+
+.images {
+
+    &__item {
+        position: relative;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    &__item--hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        background: rgba(255,255,255,0.6);
+        opacity: 0;
+        transition: all .2s linear
+    }
+
+    &__item:hover .images__item--hover,
+    &__item:active .images__item--hover {
+        opacity: 1;
+    }
+
+    &__pic {
+        display: inline-block;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__desc {
+        padding: 15px 20px;
+        background: $color-primary;
+        color: $color-basic;
+        transform: translateY(30px);
+        transition: all .3s linear
+    }
+
+    &__item:hover .images__desc,
+    &__item:active .images__desc {
+        transform: translateY(0);
+    }
+}
+
+.separate-block {
+    display: flex;
+    min-height: 150px;
+    padding: 0 30px;
+    background: $color-bgr;
+
+    .text {
+        padding: 0;
+    }
+    
+    @include mobile {
+        flex-direction: column;
+        height: auto;
+        padding: 30px;
+    }
+}
+
+  /*end of about*/
