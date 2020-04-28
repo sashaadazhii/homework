@@ -122,7 +122,8 @@
 .slick-dots
 {
     position: absolute;
-    bottom: -25px;
+    /* bottom: -25px; */
+    bottom: 0;
 
     display: block;
 
@@ -188,17 +189,36 @@
     width: 20px;
     height: 20px;
 
-    content: '•';
+    /* content: '•'; */
+    /**/
+    content: '';
+    width: 16px;
+    height: 5px;
+    background: #60606e;
+    /**/
     text-align: center;
 
-    opacity: .25;
+    /* opacity: .25; */
+    opacity: 1;
     color: black;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 .slick-dots li.slick-active button:before
 {
-    opacity: .75;
+    /**/
+    width: 22px;
+    /* margin-right: 5px; */
+    /* border: 5px solid transparent; */
+    background: #7beec7;
+    /**/
+    /* opacity: .75; */
+    opacity: 1;
     color: black;
+}
+
+.slick-dots li.slick-active button:before ~ li button:before {
+    left: 20px;
 }

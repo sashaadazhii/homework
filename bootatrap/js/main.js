@@ -13,6 +13,19 @@ $(document).ready(function () {
         cssEase: 'linear',
     });
 
+    $('.slider-response').slick({
+        lazyLoad: 'ondemand',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        // fade: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        cssEase: 'linear',
+    });
+
 
     /*mobile menu*/
     var containerWidth = $("body").width();

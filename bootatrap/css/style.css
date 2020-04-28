@@ -49,6 +49,15 @@ h1, h2, h3 {
   color: #7beec7;
   background-color: #fff; }
 
+.btn--small {
+  min-width: 100px;
+  padding: 10px 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background-color: #7beec7;
+  border-radius: 0; }
+
 .toggle {
   position: relative;
   display: inline-block;
@@ -482,5 +491,39 @@ ion-icon {
       flex-direction: column;
       height: auto;
       padding: 30px; } }
+
+.container-response {
+  padding-bottom: 100px; }
+  @media only screen and (max-width: 992px) {
+    .container-response {
+      padding-bottom: 50px; } }
+
+.slider-response {
+  padding-bottom: 50px;
+  text-align: center; }
+  .slider-response__img {
+    width: 82px;
+    height: 82px;
+    margin: 15px auto 25px; }
+  .slider-response__pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; }
+
+.examples {
+  display: flex;
+  flex-flow: row wrap; }
+  .examples__item {
+    width: 33.33333%;
+    padding: 15px;
+    text-align: center; }
+    @media only screen and (max-width: 576px) {
+      .examples__item {
+        width: 50%; } }
+  .examples__link {
+    width: 100%; }
+  .examples__img {
+    object-fit: cover; }
 
 /*end of about*/
