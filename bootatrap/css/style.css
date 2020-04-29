@@ -336,8 +336,7 @@ ion-icon {
     display: flex; }
     @media only screen and (max-width: 768px) {
       .email-block__input {
-        flex-flow: row wrap;
-        justify-content: center; } }
+        flex-flow: row wrap; } }
 
 .input-email {
   width: 100%;
@@ -582,10 +581,13 @@ ion-icon {
     flex-direction: column;
     height: 500px;
     padding: 30px;
+    margin-bottom: 15px;
     border-top: 5px solid #7beec7;
     transition: 0.2s linear; }
+    @media only screen and (max-width: 576px) {
+      .widget__item {
+        margin: 15px; } }
     .widget__item::after {
-      position: relative;
       content: "";
       position: absolute;
       top: 3px;
@@ -595,18 +597,67 @@ ion-icon {
       border-left: 10px solid transparent;
       border-right: 0px solid transparent;
       border-top: 10px solid #7beec7; }
+      @media only screen and (max-width: 576px) {
+        .widget__item::after {
+          top: 20px;
+          right: 30px; } }
     .widget__item:hover, .widget__item:active {
       box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.25); }
   .widget__top {
     flex: 1; }
-  .widget__price {
-    display: inline;
-    padding: 10px 20px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    color: #fff;
-    background: #7beec7; }
   .widget__list {
     padding: 50px 0; }
 
+.accent-block {
+  display: inline;
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background: #7beec7; }
+
 /*end of services*/
+/*blog*/
+.article__img {
+  width: 100%;
+  height: 500px;
+  padding: 30px 0; }
+  @media only screen and (max-width: 576px) {
+    .article__img {
+      height: 300px; } }
+
+.article__pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.article__info {
+  display: flex;
+  align-items: center; }
+
+.article__comment, .article__like {
+  display: flex;
+  align-items: center;
+  padding-left: 15px; }
+
+.article__comment-counter, .article__like-counter {
+  padding: 0 9px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #ccc; }
+
+.article ion-icon {
+  color: #ccc;
+  font-size: 20px;
+  transition: 0.2s linear; }
+  .article ion-icon:hover {
+    cursor: pointer;
+    background: #999; }
+
+.article__more ion-icon {
+  padding-left: 5px;
+  font-size: 16px;
+  color: #60606e;
+  vertical-align: text-bottom; }
+
+/*end of blog*/
