@@ -660,4 +660,24 @@ ion-icon {
   color: #60606e;
   vertical-align: text-bottom; }
 
+.search {
+  position: relative; }
+  .search__input {
+    height: 40px;
+    background: #efeff0;
+    border-radius: 0;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    color: #60606e; }
+  .search__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: 20px; }
+
+.tabs {
+  display: flex; }
+
 /*end of blog*/

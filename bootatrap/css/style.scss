@@ -770,9 +770,31 @@ ion-icon {
             vertical-align: text-bottom;
         }
     }
-  
-
-
-
 }
+
+.search {
+    position: relative;
+
+
+    &__input {
+        height: 40px;
+        background: $color-bgr;
+        border-radius: 0;
+        border: none;
+        @include font($font-secondary, 12px, $color-text);
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        font-size: 20px;
+    }
+}
+
+.tabs {
+    display: flex;
+}
+
 /*end of blog*/
