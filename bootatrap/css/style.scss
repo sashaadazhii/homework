@@ -715,12 +715,13 @@ ion-icon {
 
 /*blog*/
 .article {
+  
     &__img {
         width: 100%;
         height: 500px;
-        padding: 30px 0;
+        padding-bottom: 30px;
 
-        @include mobile {
+        @include tablet {
             height: 300px;
         }
     }
@@ -757,8 +758,6 @@ ion-icon {
         &:hover {
             cursor: pointer;
             background: $color-text-secondary;
-
-
         }
     }
 
@@ -772,9 +771,16 @@ ion-icon {
     }
 }
 
+.article:not(:last-child) {
+    padding-bottom: 70px;
+}
+
+.aside-post .title {
+    padding-top: 50px;
+}
+
 .search {
     position: relative;
-
 
     &__input {
         height: 40px;
@@ -795,6 +801,110 @@ ion-icon {
 
 .tabs {
     display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+
+    &__item {
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__title {
+        padding-bottom: 20px;
+        @include font($font-secondary, 12px, $color-text-secondary);
+        text-align: center;
+        border-bottom: 2px solid $color-counter;
+    }
+
+    .active > &__title {
+        color: $color-text;
+        border-bottom: 2px solid $color-primary;
+    }
 }
 
+.posts-thumb {
+    &__item {
+        display: flex;
+        padding: 5px 0;
+    }
+
+    &__img {
+        width: 95px;
+        height: 80px;
+        margin-right: 15px;
+    }
+
+    &__pic {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__prev {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+         .title {
+            padding: 0;
+        }
+    }
+
+    &__date {
+        @include font($font-primary, 12px, $color-text-secondary);
+    }
+}
+
+.category-widget {
+    &__item {
+        padding: 20px 15px;
+        @include font($font-primary, $fsize-primary, $color-text-secondary);
+        border-bottom: 1px solid $color-counter;
+        transition: 0.2s linear;
+
+        &:hover,
+        &:active {
+           color: $color-text;
+           border-bottom: 1px solid $color-primary;
+        }
+    }
+
+    &__counter {
+        float: right;
+    }
+}
+
+.tag {
+
+    display: flex;
+    flex-flow: row wrap;
+
+    &__item {
+        padding: 11px 20px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        background: $color-bgr;
+        transition: 0.2s linear;
+
+        &:hover,
+        &:active {
+           color: $color-text;
+           background: $color-primary;
+        }
+    }
+
+    &__link {
+        @include font($font-secondary, 12px, $color-text-secondary);
+
+    }
+}
+
+// @include mobile {
+//     .mobile-reverse {
+//         flex-direction: row-reverse;
+//     }
+// }
 /*end of blog*/

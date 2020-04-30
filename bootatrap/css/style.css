@@ -621,8 +621,8 @@ ion-icon {
 .article__img {
   width: 100%;
   height: 500px;
-  padding: 30px 0; }
-  @media only screen and (max-width: 576px) {
+  padding-bottom: 30px; }
+  @media only screen and (max-width: 992px) {
     .article__img {
       height: 300px; } }
 
@@ -660,6 +660,12 @@ ion-icon {
   color: #60606e;
   vertical-align: text-bottom; }
 
+.article:not(:last-child) {
+  padding-bottom: 70px; }
+
+.aside-post .title {
+  padding-top: 50px; }
+
 .search {
   position: relative; }
   .search__input {
@@ -678,6 +684,79 @@ ion-icon {
     font-size: 20px; }
 
 .tabs {
-  display: flex; }
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px; }
+  .tabs__item {
+    width: 100%; }
+    .tabs__item:hover {
+      cursor: pointer; }
+  .tabs__title {
+    padding-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    border-bottom: 2px solid #ccc; }
+  .active > .tabs__title {
+    color: #60606e;
+    border-bottom: 2px solid #7beec7; }
+
+.posts-thumb__item {
+  display: flex;
+  padding: 5px 0; }
+
+.posts-thumb__img {
+  width: 95px;
+  height: 80px;
+  margin-right: 15px; }
+
+.posts-thumb__pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.posts-thumb__prev {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .posts-thumb__prev .title {
+    padding: 0; }
+
+.posts-thumb__date {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: #999; }
+
+.category-widget__item {
+  padding: 20px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #999;
+  border-bottom: 1px solid #ccc;
+  transition: 0.2s linear; }
+  .category-widget__item:hover, .category-widget__item:active {
+    color: #60606e;
+    border-bottom: 1px solid #7beec7; }
+
+.category-widget__counter {
+  float: right; }
+
+.tag {
+  display: flex;
+  flex-flow: row wrap; }
+  .tag__item {
+    padding: 11px 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background: #efeff0;
+    transition: 0.2s linear; }
+    .tag__item:hover, .tag__item:active {
+      color: #60606e;
+      background: #7beec7; }
+  .tag__link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    color: #999; }
 
 /*end of blog*/
