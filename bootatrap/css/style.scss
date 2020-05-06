@@ -878,7 +878,6 @@ ion-icon {
 }
 
 .tag {
-
     display: flex;
     flex-flow: row wrap;
 
@@ -918,7 +917,7 @@ ion-icon {
         border: 1px solid $color-light;
 
         &:active,
-        &:focus{
+        &:focus {
             outline: none;
             border: 1px solid $color-primary;
             box-shadow: none;
@@ -966,6 +965,5 @@ ion-icon {
         overflow: hidden;
     }
 }
-
 
 /*end of contacts*/
