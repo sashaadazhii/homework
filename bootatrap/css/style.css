@@ -29,7 +29,9 @@ h1, h2, h3 {
   outline: none;
   transition: 0.2s linear; }
   .btn:hover, .btn:active, .btn:focus {
-    outline: none; }
+    outline: none;
+    border: none;
+    box-shadow: none; }
 
 .btn-container-header {
   transform: translateY(50%);
@@ -760,3 +762,49 @@ ion-icon {
     color: #999; }
 
 /*end of blog*/
+/*contacts*/
+.contact-form .form-group {
+  margin-bottom: 0; }
+
+.contact-form__input {
+  height: 50px;
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #999;
+  background: #fefcf9;
+  border-radius: 0;
+  border: 1px solid #cecece; }
+  .contact-form__input:active, .contact-form__input:focus {
+    outline: none;
+    border: 1px solid #7beec7;
+    box-shadow: none; }
+  .contact-form__input:invalid {
+    background: #fde0e7; }
+
+.contact-form__textarea {
+  min-height: 200px; }
+
+.contact-form__input::placeholder {
+  color: #ccc;
+  text-transform: uppercase; }
+
+.contact-info .social {
+  justify-content: unset; }
+  .contact-info .social__item:first-child {
+    padding-left: 0; }
+
+.contacts__link--bold {
+  font-weight: 700; }
+
+.map {
+  width: 100%;
+  height: 100%; }
+  @media only screen and (max-width: 576px) {
+    .map {
+      width: 310px;
+      height: 400px;
+      margin: 0 auto;
+      overflow: hidden; } }
+
+/*end of contacts*/

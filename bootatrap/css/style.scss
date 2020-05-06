@@ -901,10 +901,71 @@ ion-icon {
 
     }
 }
-
-// @include mobile {
-//     .mobile-reverse {
-//         flex-direction: row-reverse;
-//     }
-// }
 /*end of blog*/
+
+/*contacts*/
+.contact-form {
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    &__input {
+        height: 50px;
+        margin-bottom: 30px;
+        @include font($font-secondary, 12px, $color-text-secondary);
+        background: #fefcf9;
+        border-radius: 0;
+        border: 1px solid $color-light;
+
+        &:active,
+        &:focus{
+            outline: none;
+            border: 1px solid $color-primary;
+            box-shadow: none;
+        }
+
+        &:invalid {
+            background: #fde0e7;
+        }
+    }
+
+    &__textarea {
+        min-height: 200px;
+    }
+
+    &__input::placeholder {
+        color: $color-counter;
+        text-transform: $uppercase;
+    }
+}
+
+.contact-info {
+    .social {
+        justify-content: unset;
+
+        &__item:first-child {
+            padding-left: 0;
+        }
+    }
+}
+
+.contacts {
+    &__link--bold {
+        font-weight: 700;
+    }
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+
+    @include mobile {
+        width: 310px;
+        height: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}
+
+
+/*end of contacts*/
